@@ -98,5 +98,138 @@ button {all: unset; text-align: center; border-radius: 5px; cursor: pointer; dis
 }
 /* 관리자로그인페이지End */
 
+/* 관리자키오스크기기선택페이지 */
+#adminoption_wrap .in{
+    width: 820px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#adminoption_wrap .tit-area{
+    text-align: center;
+    margin-bottom: 40px;
+}
+#adminoption_wrap .tit-area h1{
+    margin-bottom: 20px;
+}
+#adminoption_wrap .tit-area h1 img{
+    height: 80px;
+    object-fit: contain;
+}
+#adminoption_wrap .tit-area h5 span{
+    font-size: inherit;
+}
+#adminoption_wrap .opt-label{
+    width: 100%;
+    /* padding-bottom: 10px; */
+    background: #fff;
+}
+#adminoption_wrap .opt-label ul{
+    display: flex;
+    justify-content: space-between;
+    color: var(--lightertxt);
+    padding: 0px 25px;
+}
+#adminoption_wrap .opt-label ul .opt1{
+    width: 95px;
+}
+#adminoption_wrap .opt-label ul .opt2{
+    width: 305px;
+}
+#adminoption_wrap .opt-label ul .opt3{
+    width: 355px;
+}
+#adminoption_wrap .opt-area{
+    width: 100%;
+    height: 470px;
+    position: relative;
+}
+#adminoption_wrap .opt-area .top-effect{
+    position: absolute;
+    top: 0;left: 0;
+    width: calc(100% - 15px); height: 100px;
+    background: linear-gradient(to top, rgba(255, 255, 255, 0) 0%, #fff 90%);
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    display: none;
+}
+#adminoption_wrap .opt-area .top-effect.show{
+    display: flex;
+}
+#adminoption_wrap .opt-area .bottom-effect{
+    position: absolute;
+    bottom: 0;left: 0;
+    width: calc(100% - 15px); height: 100px;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #fff 90%);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+}
+#adminoption_wrap .opt-area .bottom-effect.hide{
+    display: none;
+}
+#adminoption_wrap .opt-area .bottom-effect img{
+    height: 25px;
+    object-fit: contain;
+}
+#adminoption_wrap .opt-area .opt-box{
+    width: 100%;
+    height: 470px;
+    overflow-y: auto;
+    padding-right: 10px;
+    padding-top: 10px;
+}
+#adminoption_wrap .opt-area .opt-box::-webkit-scrollbar-button:vertical {
+    background-color: #fff;
+}
+#adminoption_wrap .opt-area .opt-box::-webkit-scrollbar-track {
+    background-color: #fff;
+}
+#adminoption_wrap .opt-area .opt-box::-webkit-scrollbar-thumb {
+    background-color: #ccc;
+}
+#adminoption_wrap .opt-area .opt-box::-webkit-scrollbar {
+    width: 5px;
+}
+#adminoption_wrap .opt-area .opt-box .opt{
+    border: 1px solid var(--border);
+    border-radius: 5px;
+    margin-bottom: 10px;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    cursor: pointer;
+}
+#adminoption_wrap .opt-area .opt-box .opt:last-child{
+    margin-bottom: 100px;
+}
+#adminoption_wrap .opt-area .opt-box .opt ul{
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 24px;
+}
+#adminoption_wrap .opt-area .opt-box .opt ul li{
+    font-weight: 700;
+    font-size: var(--fonth5);
+    cursor: pointer;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+#adminoption_wrap .opt-area .opt-box .opt ul .opt1{
+    width: 90px;
+}
+#adminoption_wrap .opt-area .opt-box .opt ul .opt2{
+    width: 300px;
+}
+#adminoption_wrap .opt-area .opt-box .opt ul .opt3{
+    width: 340px;
+}
 
 

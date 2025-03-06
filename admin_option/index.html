@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>관리자 키오스크 기기선택 페이지</title>
+
+    <!-- css -->
+    <link rel="stylesheet" href="../common_css/common.css">
+</head>
+
+
+<body>
+    <div id="adminoption_wrap">
+        <div class="in">
+            <div class="tit-area">
+                <h1><img src="../img/study_logo.png" alt="올티칭 스터디카페"></h1>
+                <h5>[<span class="franchise_name">가맹점명</span>] 키오스크 선택</h5>
+            </div>
+            <div class="opt-label">
+                <ul>
+                    <li class="opt1">No.</li>
+                    <li class="opt2">키오스크명</li>
+                    <li class="opt3">시리얼</li>
+                </ul>
+            </div>
+            <div class="opt-area">
+                <div class="top-effect"></div>
+                <div class="bottom-effect">
+                    <img src="../img/admin_option/arrow.png" alt="아래로 스크롤하세요.">
+                </div>
+                <div class="opt-box">
+                    <div class="opt">
+                        <ul>
+                            <li class="opt1">01</li>
+                            <li class="opt2">올티칭1 키오스크 이름 이곳에 입력합니다.</li>
+                            <li class="opt3">ABC0123456789</li>
+                        </ul>
+                    </div>
+                    <div class="opt">
+                        <ul>
+                            <li class="opt1">02</li>
+                            <li class="opt2">올티칭2</li>
+                            <li class="opt3">ABC0123456789</li>
+                        </ul>
+                    </div>
+                    <div class="opt">
+                        <ul>
+                            <li class="opt1">03</li>
+                            <li class="opt2">올티칭3</li>
+                            <li class="opt3">ABC0123456789</li>
+                        </ul>
+                    </div>
+                    <div class="opt">
+                        <ul>
+                            <li class="opt1">04</li>
+                            <li class="opt2">올티칭4</li>
+                            <li class="opt3">ABC0123456789</li>
+                        </ul>
+                    </div>
+                    <div class="opt">
+                        <ul>
+                            <li class="opt1">05</li>
+                            <li class="opt2">올티칭5</li>
+                            <li class="opt3">ABC0123456789</li>
+                        </ul>
+                    </div>
+                    <div class="opt">
+                        <ul>
+                            <li class="opt1">06</li>
+                            <li class="opt2">올티칭6</li>
+                            <li class="opt3">ABC0123456789</li>
+                        </ul>
+                    </div>
+                    <div class="opt">
+                        <ul>
+                            <li class="opt1">07</li>
+                            <li class="opt2">올티칭7</li>
+                            <li class="opt3">ABC0123456789</li>
+                        </ul>
+                    </div>
+                    <div class="opt">
+                        <ul>
+                            <li class="opt1">08</li>
+                            <li class="opt2">올티칭8</li>
+                            <li class="opt3">ABC0123456789</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- js -->
+    <script>
+    document.addEventListener("DOMContentLoaded", function () {
+    const optArea = document.querySelector("#adminoption_wrap .opt-box");
+    const arrowImg = document.querySelector("#adminoption_wrap .bottom-effect");
+    const topBg = document.querySelector("#adminoption_wrap .top-effect");
+
+        optArea.addEventListener("scroll", function () {
+            const currentScroll = optArea.scrollTop + optArea.clientHeight;
+            const maxScroll = optArea.scrollHeight;
+
+            if (currentScroll >= maxScroll - 100) {
+            arrowImg.classList.add("hide");
+            topBg.classList.add("show");
+            } else {
+            arrowImg.classList.remove("hide");
+            topBg.classList.remove("show");
+            }
+        });
+    });    
+</script>
+</body>
+</html>
