@@ -1,0 +1,102 @@
+@charset "utf-8";
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+*{margin: 0; padding: 0; box-sizing: border-box;}
+img,video,iframe{vertical-align: middle; display: inline-block;}
+a{text-decoration: none; color: inherit;}
+ul,ol{list-style: none;}
+:root {
+    --maincolor: #025157;
+    --mainlight:#3CB9C2;
+    --mainlighter: #f2f6f7;
+    --border:#d9d9d9;
+    --txt:#000;
+    --lighttxt:#555;
+    --lightertxt:#777;
+
+    --fontsmall:clamp(12px,1vw,14px);
+    --fontmid:clamp(14px,1.5vw,16px);
+
+    --fonth1:clamp(44px,5vw,60px);
+    --fonth2:clamp(32px,4.5vw,44px);
+    --fonth3:clamp(24px,4vw,32px);
+    --fonth4:clamp(20px,3.5vw,24px);
+    --fonth5:clamp(18px,3vw,20px);
+}
+h1{font-size: var(--fonth1); line-height:1.4; font-family: 'Pretendard-Regular'; font-weight: 700;}
+h2{font-size: var(--fonth2); line-height:1.4; font-family: 'Pretendard-Regular'; font-weight: 700;}
+h3{font-size: var(--fonth3); line-height:1.4; font-family: 'Pretendard-Regular'; font-weight: 700;}
+h4{font-size: var(--fonth4); line-height:1.4; font-family: 'Pretendard-Regular'; font-weight: 700;}
+h5{font-size: var(--fonth5); line-height:1.4; font-family: 'Pretendard-Regular'; font-weight: 700;}
+p,span,a,li,td,label,button{font-size:var(--fontmid); line-height:1.4; font-family: 'Pretendard-Regular';}
+
+input {border:1px solid var(--border); border-radius:5px; outline: none; padding: 10px; height: 50px; width: 100%;}
+input:focus {outline:none;}
+button {all: unset; text-align: center; border-radius: 5px; cursor: pointer; display: inline-block; width: 100%; height:50px;}
+
+.in{width: 1400px; margin: 0 auto;}
+
+
+
+/* 관리자로그인페이지 */
+#adminlogin_wrap .in{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#adminlogin_wrap .form-area{
+    width: 572px;
+}
+#adminlogin_wrap .form-area .tit-area{
+    text-align: center;
+    margin-bottom: 40px;
+}
+#adminlogin_wrap .form-area .tit-area h1{
+    margin-bottom: 20px;
+}
+#adminlogin_wrap .form-area .tit-area h1 img{
+    height: 80px;
+    object-fit: contain;
+}
+#adminlogin_wrap .form-area .login-area{
+    margin-bottom: 40px;
+}
+#adminlogin_wrap .form-area .login-area .login-id{
+    margin-bottom: 30px;
+}
+#adminlogin_wrap .form-area .login-area .login-pw{
+    margin-bottom: 40px;
+}
+#adminlogin_wrap .form-area .login-area .login-pw .input-group{
+    position: relative;
+}
+#adminlogin_wrap .form-area .login-area .login-pw .input-group img{
+    position: absolute;
+    top: 50%; right: 10px;
+    transform: translateY(-40%);
+    width: 20px; object-fit: contain;
+    cursor: pointer;
+}
+#adminlogin_wrap .form-area .login-area .login-btn{
+    background: var(--maincolor);
+    color: #fff;
+    font-weight: 700;
+}
+#adminlogin_wrap .form-area .info-area{
+    color: var(--lightertxt);
+    text-align: center;
+}
+#adminlogin_wrap .form-area .info-area .tel img{
+    width: 20px;
+    transform: translateY(-10%);
+}
+/* 관리자로그인페이지End */
+
+
+
