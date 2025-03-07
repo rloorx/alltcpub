@@ -38,7 +38,7 @@ input {border:1px solid var(--border); border-radius:5px; outline: none; padding
 input:focus {outline:none;}
 button {all: unset; text-align: center; border-radius: 5px; cursor: pointer; display: inline-block; width: 100%; height:50px;}
 
-.in{width: 1400px; margin: 0 auto;}
+.in{width: 1024px; margin: 0 auto;}
 
 
 
@@ -239,5 +239,193 @@ button {all: unset; text-align: center; border-radius: 5px; cursor: pointer; dis
 #adminoption_wrap .opt-area .opt-box .opt ul .opt3{
     width: 340px;
 }
+
+/* 사용자 로그인 페이지 */
+#userlogin_wrap .header{
+    height: 80px;
+    width: 100%;
+    background: #fff;
+    margin-bottom: 50px;
+}
+#userlogin_wrap .header h1 img{
+    height: 40px;
+    object-fit: contain;
+}
+#userlogin_wrap .tit-area{
+    margin-bottom: 60px;
+}
+#userlogin_wrap .login-area{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 80px;
+}
+#userlogin_wrap .login-area .form-area{
+    width: 505px;
+}
+#userlogin_wrap .login-area .form-area .login-tel{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+#userlogin_wrap .login-area .form-area .login-tel .input-group{
+    width: 400px;
+    height: 80px;
+    position: relative;
+    border: 1px solid var(--border);
+    border-radius: 5px;
+}
+#userlogin_wrap .login-area .form-area .login-tel .input-group>div{
+    width: 100%;
+    height: 100%;
+    padding-left: 10px;
+    display: flex;
+    align-items: center;
+}
+#userlogin_wrap .login-area .form-area .login-tel .input-group>img{
+    position: absolute;
+    right: 10px; top: 50%;
+    transform: translateY(-50%);
+    height: 24px;
+    object-fit: contain;
+    cursor: pointer;
+}
+#userlogin_wrap .login-area .form-area .login-pw{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 50px;
+}
+#userlogin_wrap .login-area .form-area .login-pw .input-group{
+    width: 400px;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+}
+#userlogin_wrap .login-area .form-area .login-pw .input-group>div{
+    width: 80px;
+    height: 100%;
+    border: 1px solid var(--border);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#userlogin_wrap .login-area .form-area .login-btn{
+    width: 100%;
+    height: 80px;
+    border-radius: 5px;
+    background: var(--maincolor);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color:#fff;
+    font-size: var(--fonth4);
+    font-weight:700;
+    margin-bottom: 40px;
+}
+#userlogin_wrap .login-area .form-area .quest-area{
+    position: relative;
+    text-align: center;
+    margin-bottom: 20px;
+}
+#userlogin_wrap .login-area .form-area .quest-area::before{
+    content: "";
+    width: 100%;
+    height: 1px;
+    background: var(--lightertxt);
+    position: absolute;
+    top: 50%; left: 0;
+    transform: translateY(-50%);
+}
+#userlogin_wrap .login-area .form-area .quest-area h5{
+    font-weight: 400;
+    color: var(--lightertxt);
+    background: #fff;
+    padding: 0px 10px;
+    position: relative;
+    display: inline-block;
+}
+#userlogin_wrap .login-area .form-area .join-btn{
+    width: 100%;
+    height: 80px;
+    border-radius: 5px;
+    background: #fff;
+    border: 1px solid var(--maincolor);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color:var(--maincolor);
+    font-size: var(--fonth4);
+    font-weight:700;
+}
+#userlogin_wrap .login-area .button-area{
+    width: 360px;
+    height: 488px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: stretch;
+}
+#userlogin_wrap .login-area .button-area>div{
+    width: 100px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100px;
+    background: #ececec;
+    cursor: pointer;
+}
+#userlogin_wrap .login-area .button-area>div>p{
+    font-size: var(--fonth3);
+    font-weight: 700;
+}
+#userlogin_wrap .login-area .button-area>div.firstnum{
+    background: #d9d9d9;
+}
+#userlogin_wrap .login-area .button-area>div.back{
+    background: #777;
+}
+#userlogin_wrap .login-area .button-area>div.back>img{
+    height: 40px;
+    object-fit: contain;
+}
+#userlogin_wrap .seat-area{
+    width: 800px;
+    height: 50px;
+    border-radius: 5px;
+    background: #ececec;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 70px;
+    margin: 0 auto;
+}
+#userlogin_wrap .seat-area .seat01,.seat02,.seat03{
+    display: flex;
+}
+#userlogin_wrap .seat-area .seat01 .seat-num{
+    margin-left: 20px;
+    font-weight: 400;
+}
+#userlogin_wrap .seat-area .seat02 .seat-num{
+    margin-left: 20px;
+    font-weight: 400;
+}
+#userlogin_wrap .seat-area .seat03 .seat-num{
+    margin-left: 20px;
+    font-weight: 400;
+}
+
+
+
 
 
