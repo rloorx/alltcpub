@@ -54,11 +54,19 @@ button {all: unset; text-align: center; border-radius: 5px; cursor: pointer; dis
     width: 572px;
 }
 #adminlogin_wrap .form-area .tit-area{
+    position: relative;
     text-align: center;
-    margin-bottom: 40px;
+    margin-bottom: 60px;
 }
 #adminlogin_wrap .form-area .tit-area h1{
     margin-bottom: 20px;
+}
+#adminlogin_wrap .form-area .tit-area p{
+    position: absolute;
+    left:50%; 
+    transform: translateX(-50%);
+    padding-top: 5px;
+    color: red;
 }
 #adminlogin_wrap .form-area .tit-area h1 img{
     height: 80px;
