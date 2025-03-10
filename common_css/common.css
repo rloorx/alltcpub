@@ -255,6 +255,11 @@ button {all: unset; text-align: center; border-radius: 5px; cursor: pointer; dis
 #userlogin_wrap .tit-area{
     margin-bottom: 60px;
 }
+#userlogin_wrap .tit-area p{
+    position: absolute;
+    padding-top: 5px;
+    color: red;
+}
 #userlogin_wrap .login-area{
     display: flex;
     justify-content: space-between;
