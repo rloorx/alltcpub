@@ -636,6 +636,45 @@ button {all: unset; text-align: center; border-radius: 5px; cursor: pointer; dis
 }
 /* 사용자회원가입페이지End */
 
+/* 사용자회원가입완료페이지 */
+#userjoinfin_wrap>.in{
+    height: calc(100vh - 130px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#userjoinfin_wrap .fin-area{
+    width: 505px;
+    text-align: center;
+}
+#userjoinfin_wrap .fin-area h4{
+    font-weight: 400;
+    margin-bottom: 50px;
+}
+#userjoinfin_wrap .fin-area img{
+    height: 100px;
+    object-fit: contain;
+    margin-bottom: 40px;
+}
+#userjoinfin_wrap .fin-area h2{
+    margin-bottom: 60px;
+}
+#userjoinfin_wrap .fin-area .fin-btn{
+    display: block;
+    width: 100%;
+    height: 80px;
+    border-radius: 5px;
+    background: var(--maincolor);
+    color: #fff;
+    font-size: var(--fonth4);
+    line-height: 80px;
+    font-weight: 700;
+}
+/* 사용자회원가입완료페이지End */
+
+
+
 
 
 
