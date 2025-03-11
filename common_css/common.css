@@ -457,7 +457,13 @@ button {all: unset; text-align: center; border-radius: 5px; cursor: pointer; dis
     object-fit: contain;
 }
 #userjoin_wrap .tit-area{
+    position: relative;
     margin-bottom: 80px;
+}
+#userjoin_wrap .tit-area p{
+    position: absolute;
+    padding-top: 5px;
+    color: red;
 }
 #userjoin_wrap .join-area{
     width: 875px;
