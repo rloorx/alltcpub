@@ -531,16 +531,16 @@ button {all: unset; text-align: center; border-radius: 5px; cursor: pointer; dis
     object-fit: contain;
 }
 #userjoin_wrap .form-area .join-pw{
-    width: 635px;
+    width: 765px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 57px;
+    margin-bottom: 30px;
 }
 #userjoin_wrap .join-pw>h4{
     width: 100px;
 }
-#userjoin_wrap .join-pw>div{
+/* #userjoin_wrap .join-pw>div{
     position: relative;
     margin-right: 30px;
 }
@@ -548,20 +548,22 @@ button {all: unset; text-align: center; border-radius: 5px; cursor: pointer; dis
     position: absolute;
     top: calc(100% + 5px); 
     color: #777;
-}
+} */
 #userjoin_wrap .join-pw .input-group{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 400px;
-    height: 80px;
+    width: 530px;
+    position: relative;
+    margin-right: 30px;
 }
 #userjoin_wrap .join-pw .input-group>input{
-    width: 80px;
-    height: 100%;
-    border: 1px solid var(--border);
-    border-radius: 5px;
-    text-align: center;
+    height: 80px;
+    font-size: var(--fonth3);
+}
+#userjoin_wrap .join-pw .input-group img{
+    position: absolute;
+    right: 10px; top: 50%;
+    transform: translateY(-50%);
+    height: 24px;
+    object-fit: contain;
 }
 #userjoin_wrap .form-area .join-tel{
     width: 765px;
