@@ -40,10 +40,12 @@ button {all: unset; text-align: center; border-radius: 5px; cursor: pointer; dis
 
 .in{width: 1024px; margin: 0 auto;}
 .header{
-    height: 80px;
+    height: 100px;
     width: 100%;
     background: #fff;
-    margin-bottom: 50px;
+    margin-bottom: 80px;
+    display: flex;
+    align-items: center;
 }
 .header h1 img{
     height: 40px;
@@ -253,7 +255,7 @@ button {all: unset; text-align: center; border-radius: 5px; cursor: pointer; dis
 
 /* 사용자 로그인 페이지 */
 #userlogin_wrap .tit-area{
-    margin-bottom: 60px;
+    margin-bottom: 80px;
 }
 #userlogin_wrap .tit-area p{
     position: absolute;
@@ -455,7 +457,7 @@ button {all: unset; text-align: center; border-radius: 5px; cursor: pointer; dis
     object-fit: contain;
 }
 #userjoin_wrap .tit-area{
-    margin-bottom: 60px;
+    margin-bottom: 80px;
 }
 #userjoin_wrap .join-area{
     width: 875px;
@@ -643,7 +645,7 @@ button {all: unset; text-align: center; border-radius: 5px; cursor: pointer; dis
 
 /* 사용자회원가입완료페이지 */
 #userjoinfin_wrap>.in{
-    height: calc(100vh - 130px);
+    height: calc(100vh - 250px);
     display: flex;
     flex-direction: column;
     align-items: center;
