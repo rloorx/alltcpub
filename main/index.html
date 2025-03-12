@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>사용자 메인페이지 : gnb팝업 포함</title>
+
+    <!-- css -->
+    <link rel="stylesheet" href="../common_css/common.css">
+</head>
+<body>
+    <div id="main_wrap">
+        <!--gnb팝업 -->
+        <div class="modal">
+            <div class="gnb-popup">
+                <div class="popup-iframe">
+                    <iframe src="./gnb01_popup.html" frameborder="0" class="pop-iframe"></iframe>
+                    <!-- 스크립트로 src 변경 -->
+                </div>
+                <div class="popup-close" onclick="closePopup()">
+                    <img src="../img/main/popup-close.png" alt="팝업 닫기">
+                </div>
+            </div>
+        </div>
+         <!-- gnb팝업End -->
+
+        <div class="header">
+            <div class="in">
+                <h1><img src="../img/study_logo.png" alt="올티칭 스터디카페"></h1>
+                <ul class="gnb-area">
+                    <li onclick="openPopup()">고객센터</li>
+                    <li onclick="openPopup()">이벤트</li>
+                    <li onclick="openPopup()">요금안내</li>
+                </ul>
+                <p><span style="font-size: inherit;">홍길동</span> 회원님</p>
+                <div class="timer-wrap">
+                    <div class="timer">
+                        <div class="mask"></div>
+                    </div>
+                    <p><span>20</span>초</p>
+                </div>
+                <button type="button" class="logout-btn">로그아웃</button>
+            </div>
+        </div>
+        <div class="in">
+            <div class="function-area">
+                <div class="function function01">
+                    <div class="function-box">
+                        <img src="../img/main/function01.png" alt="입실">
+                        <p>입실</p>
+                    </div>
+                </div>
+                <div class="function function02">
+                    <div class="function-box">
+                        <img src="../img/main/function02.png" alt="퇴실">
+                        <p>퇴실</p>
+                    </div>
+                </div>
+                <div class="function function03">
+                    <div class="function-box">
+                        <img src="../img/main/function03.png" alt="좌석 이용 현황 및 좌석 이동">
+                        <p>좌석 이용 현황 및 좌석 이동</p>
+                    </div>
+                </div>
+                <div class="function function04">
+                    <div class="function-box">
+                        <img src="../img/main/function04.png" alt="이용권 구입">
+                        <p>이용권 구입</p>
+                    </div>
+                </div>
+                <div class="function function05">
+                    <div class="function-box">
+                        <img src="../img/main/function05.png" alt="사물함 구입">
+                        <p>사물함 구입</p>
+                    </div>
+                </div>
+                <div class="function function06">
+                    <div class="function-box">
+                        <img src="../img/main/function06.png" alt="스터디룸 예약">
+                        <p>스터디룸 예약</p>
+                    </div>
+                </div>
+            </div>
+            <div class="seat-area">
+                <div class="seat01">
+                    <h5>잔여 자유석</h5>
+                    <h5 class="seat-num">99/99석</h5>
+                </div>
+                <div class="seat02">
+                    <h5>퇴실 예정</h5>
+                    <h5 class="seat-num">00석</h5>
+                </div>
+                <div class="seat03">
+                    <h5>잔여 고정석</h5>
+                    <h5 class="seat-num">99/99석</h5>
+                </div>
+            </div>
+        </div>
+        <!-- 토스트팝업 레이아웃 -->
+        <div class="toast-pop">
+            <p>이미 좌석을 이용 중입니다. 퇴실 후 다시 시도해 주세요.</p>
+        </div>
+        <!-- 토스트팝업 레이아웃End -->    
+    </div>
+
+
+    <script>
+        // 토스트팝업 1초뒤에 나왔다가 사라지게 임의로 설정해놨어여~~~
+        setTimeout(function() {
+        const toast = document.querySelector('.toast-pop');
+
+        toast.style.display = 'flex';
+        setTimeout(function() {
+            toast.classList.add('show');
+        }, 10);
+        
+        setTimeout(function() {
+            toast.classList.remove('show');
+            setTimeout(function() {
+                toast.style.display = 'none';
+                }, 500);
+            }, 1500);
+        }, 1000);       
+        // 토스트팝업End
+
+        // 타이머 글자
+        let timeLeft = 20;
+
+        document.addEventListener('DOMContentLoaded', function() {
+        document.querySelector('.timer-wrap>p>span').textContent = timeLeft;
+        });
+
+        const countdown = setInterval(function() {
+        timeLeft--; 
+
+        document.querySelector('.timer-wrap>p>span').textContent = timeLeft;
+
+        if (timeLeft <= 0) {
+            timeLeft = 20; 
+            document.querySelector('.timer-wrap>p>span').textContent = timeLeft;
+        }
+        }, 1000);        
+        // // 타이머 글자End
+
+        // 팝업 활성화
+        function openPopup(){
+            document.querySelector(".modal").classList.add("active")
+        }
+
+        function closePopup(){
+            document.querySelector(".modal").classList.remove("active")
+        }
+
+        const listItems = document.querySelectorAll(".gnb-area>li");
+
+        listItems.forEach((item, index) => {
+            item.addEventListener("click", () => {
+                const iframe = document.querySelector(".pop-iframe");
+
+                if (index === 0) {
+                    iframe.src = "./gnb01_popup.html";
+                } else if (index === 1) {
+                    iframe.src = "./gnb02_popup.html";
+                } else if (index === 2) {
+                    iframe.src = "./gnb03_popup.html"; 
+                }
+            });
+        });
+
+</script>
+</body>
+</html>
