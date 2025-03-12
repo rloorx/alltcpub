@@ -1352,8 +1352,92 @@ button {all: unset; text-align: center; border-radius: 5px; cursor: pointer; dis
     word-break: keep-all;
 }
 /* gnb 이벤트End */
-
-
+#info01 .gnb-popuparea .tit-area{
+    margin-bottom: 70px;
+}
+#info01 .gnb-popuparea .cont-area{
+    height: 420px;
+    display: flex;
+    justify-content: space-between;
+}
+#info01 .cont-area .tab-area{
+    margin-right: 40px;
+}
+#info01 .cont-area .tab-area ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 420px;
+}
+#info01 .cont-area .tab-area ul li{
+    width: 150px;
+    height: 60px;
+    border-radius: 5px;
+    border: 1px solid var(--maincolor);
+    font-size: var(--fonth5);
+    font-weight: 700;
+    color: var(--maincolor);
+    text-align: center;
+    line-height: 60px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#info01 .cont-area .tab-area ul li img{
+    height: 24px;
+    object-fit: contain;
+    margin-right: 5px;
+}
+#info01 .cont-area .tab-area ul li.on{
+    border: none;
+    background: var(--maincolor);
+    color: #fff;
+}
+#info01 .table-area{
+    width: 670px;
+}
+#info01 .table-area table{
+    table-layout: auto;
+    display: none;
+    width: 100%;
+    border-collapse: collapse;
+}
+#info01 .table-area table.on{
+    display: inline-table;
+}
+#info01 .table-area th, #info01 .table-area td {
+    border-bottom: 1px solid var(--border);
+    padding: 10px;
+    text-align: center;
+    font-size: var(--fonth5);
+    height: calc(420px / 7); /* 삭제하고 작업 - 표 각각 높이값 따로 줘야함 */
+}
+#info01 .table-area th {
+    background-color: #ececec;
+}
+/* 요금안내 표 커스텀(높이값 각각 행 갯수에 따라 조절해야함) */
+#info01 .table-area table:first-child th,
+#info01 .table-area table:first-child td {
+    height: calc(420px / 7);
+}
+#info01 .table-area table:last-child th, 
+#info01 .table-area table:last-child td {
+    height: auto;
+    font-size: 16px;
+    padding: 8.8px;
+    border-right: 1px solid var(--border);
+}
+#info01 .table-area table:last-child th:nth-child(4),
+#info01 .table-area table:last-child th:last-child,
+#info01 .table-area table:last-child td:last-child{
+    border-right: none;
+}
+#info01 .table-area table:last-child tr:nth-child(5) td:last-child,
+#info01 .table-area table:last-child tr:nth-child(4) td:last-child,
+#info01 .table-area table:last-child tr:nth-child(3) td:last-child{
+    border-right: 1px solid var(--border);
+}
 
 
 
