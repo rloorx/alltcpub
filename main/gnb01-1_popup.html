@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gnb 고객센터 - 01 결제 내역</title>
+    <!-- css -->
+    <link rel="stylesheet" href="../common_css/common.css">
+</head>
+<body>
+    <div id="center01-1">
+        <div class="gnb-popuparea">
+            <div class="tit-area">
+                <div class="back-area" style="visibility: visible;" onclick="goBack()">
+                    <img src="../img/main/popup-back.png" alt="이전페이지로">
+                </div>
+                <h2>결제 내역</h2>
+            </div>
+            <div class="cont-area">
+                <h5>이용권 선택 시 환불 요청이 관리자에게 전송됩니다.</h5>
+                <div class="opt-label">
+                    <ul>
+                        <li class="opt1">구매일</li>
+                        <li class="opt2">이용권</li>
+                        <li class="opt3">결제 금액</li>
+                        <li class="opt4">상태</li>
+                    </ul>
+                </div>
+                <div class="opt-area">
+                    <div class="top-effect"></div>
+                    <div class="bottom-effect"></div>
+                    <div class="opt-box">
+                        <div class="opt" onclick="location.href='./gnb01-2_popup.html'">
+                            <ul>
+                                <li class="opt1">2025-01-25</li>
+                                <li class="opt2">자유석 시간권 이용시간 60시간</li>
+                                <li class="opt3">120,000원</li>
+                                <li class="opt4">미사용</li>
+                            </ul>
+                        </div>
+                        <div class="opt" onclick="location.href='./gnb01-2_popup.html'">
+                            <ul>
+                                <li class="opt1">2025-01-20</li>
+                                <li class="opt2">자유석 시간권 이용시간 60시간</li>
+                                <li class="opt3">120,000원</li>
+                                <li class="opt4">미사용</li>
+                            </ul>
+                        </div>
+                        <div class="opt" onclick="location.href='./gnb01-2_popup.html'">
+                            <ul>
+                                <li class="opt1">2025-01-15</li>
+                                <li class="opt2">자유석 시간권 이용시간 60시간</li>
+                                <li class="opt3">120,000원</li>
+                                <li class="opt4">미사용</li>
+                            </ul>
+                        </div>
+                        <div class="opt" onclick="location.href='./gnb01-2_popup.html'">
+                            <ul>
+                                <li class="opt1">2025-01-10</li>
+                                <li class="opt2">자유석 시간권 이용시간 60시간</li>
+                                <li class="opt3">120,000원</li>
+                                <li class="opt4">미사용</li>
+                            </ul>
+                        </div>
+                        <div class="opt" onclick="location.href='./gnb01-2_popup.html'">
+                            <ul>
+                                <li class="opt1">2025-01-05</li>
+                                <li class="opt2">자유석 시간권 이용시간 60시간</li>
+                                <li class="opt3">120,000원</li>
+                                <li class="opt4">미사용</li>
+                            </ul>
+                        </div>
+                        <div class="opt" onclick="location.href='./gnb01-2_popup.html'">
+                            <ul>
+                                <li class="opt1">2025-01-04</li>
+                                <li class="opt2">자유석 시간권 이용시간 60시간</li>
+                                <li class="opt3">120,000원</li>
+                                <li class="opt4">미사용</li>
+                            </ul>
+                        </div>
+                        <div class="opt" onclick="location.href='./gnb01-2_popup.html'">
+                            <ul>
+                                <li class="opt1">2025-01-03</li>
+                                <li class="opt2">자유석 시간권 이용시간 60시간</li>
+                                <li class="opt3">120,000원</li>
+                                <li class="opt4">미사용</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+    
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function goBack(){
+            window.history.back();
+        }
+
+        document.addEventListener("DOMContentLoaded", function () {
+        const optArea = document.querySelector("#center01-1 .opt-box");
+        const arrowImg = document.querySelector("#center01-1 .bottom-effect");
+        const topBg = document.querySelector("#center01-1 .top-effect");
+
+        optArea.addEventListener("scroll", function () {
+            const currentScroll = optArea.scrollTop + optArea.clientHeight;
+            const maxScroll = optArea.scrollHeight;
+
+            if (currentScroll >= maxScroll - 100) {
+            arrowImg.classList.add("hide");
+            topBg.classList.add("show");
+            } else {
+            arrowImg.classList.remove("hide");
+            topBg.classList.remove("show");
+            }
+        });
+    });    
+
+    </script>
+</body>
+</html>
