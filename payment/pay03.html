@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>결제 완료 / 결제 실패</title>
+    <!-- css -->
+    <link rel="stylesheet" href="../common_css/common.css">
+</head>
+<body>
+    <div id="pay03">
+        <!--결제 성공-->
+        <div class="gnb-popuparea">
+            <div class="tit-area">
+                <div class="back-area" style="visibility: hidden;">
+                    <img src="../img/main/popup-back.png" alt="이전페이지로">
+                </div>
+            </div>
+            <div class="cont-area">
+                <img src="../img/user_join/fin-check.png">
+                <h2>결제가 완료되었습니다.</h2>
+                <div class="btn-area">
+                    <button type="button">로그아웃</button>
+                    <button type="button">메인 화면으로</button>
+                </div>
+            </div>
+        </div>
+        <!-- 결제 성공End -->
+
+        <!--결제 실패 : display:none 처리 해놨어여!!-->
+        <div class="gnb-popuparea" style="display: none;">
+            <div class="tit-area">
+                <div class="back-area" style="visibility: hidden;">
+                    <img src="../img/main/popup-back.png" alt="이전페이지로">
+                </div>
+            </div>
+            <div class="cont-area">
+                <img src="../img/payment/pay-failed.png">
+                <h2>결제에 실패했습니다.<span style="display: block; font-size: inherit;">다시 시도해 주세요.</span></h2>
+                <div class="btn-area">
+                    <button type="button">메인 화면으로</button>
+                    <button type="button">다시 결제하기</button>
+                </div>
+            </div>
+        </div>
+        <!-- 결제 실패End -->
+
+    </div>
+</body>
+</html>

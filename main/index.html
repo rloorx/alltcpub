@@ -107,7 +107,7 @@
     <script>
         // 토스트팝업 1초뒤에 나왔다가 사라지게 임의로 설정해놨어여~~~
         setTimeout(function() {
-        const toast = document.querySelector('.toast-pop');
+        const toast = document.querySelector('#main_wrap .toast-pop');
 
         toast.style.display = 'flex';
         setTimeout(function() {
@@ -144,18 +144,18 @@
 
         // 팝업 활성화
         function openPopup(){
-            document.querySelector(".modal").classList.add("active")
+            document.querySelector("#main_wrap .modal").classList.add("active")
         }
 
         function closePopup(){
-            document.querySelector(".modal").classList.remove("active")
+            document.querySelector("#main_wrap .modal").classList.remove("active")
         }
 
-        const listItems = document.querySelectorAll(".gnb-area>li");
+        const listItems = document.querySelectorAll("#main_wrap .gnb-area>li");
 
         listItems.forEach((item, index) => {
             item.addEventListener("click", () => {
-                const iframe = document.querySelector(".pop-iframe");
+                const iframe = document.querySelector("#main_wrap .pop-iframe");
 
                 if (index === 0) {
                     iframe.src = "./gnb01_popup.html";
