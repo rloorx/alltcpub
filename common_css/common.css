@@ -19,7 +19,7 @@ ul,ol{list-style: none;}
     --lightertxt:#777;
 
     --fontsmall:clamp(12px,1vw,14px);
-    --fontmid:clamp(14px,1.5vw,16px);
+    --fontmid:16px;
 
     --fonth1:clamp(44px,5vw,60px);
     --fonth2:clamp(32px,4.5vw,44px);
@@ -325,7 +325,7 @@ button {all: unset; text-align: center; border-radius: 5px; cursor: pointer; dis
 #adminoption_wrap .opt-area .top-effect{
     position: absolute;
     top: 0;left: 0;
-    width: calc(100% - 15px); height: 100px;
+    width: calc(100% - 15px); height: 50px;
     background: linear-gradient(to top, rgba(255, 255, 255, 0) 0%, #fff 90%);
     flex-direction: column;
     justify-content: flex-start;
@@ -338,7 +338,7 @@ button {all: unset; text-align: center; border-radius: 5px; cursor: pointer; dis
 #adminoption_wrap .opt-area .bottom-effect{
     position: absolute;
     bottom: 0;left: 0;
-    width: calc(100% - 15px); height: 100px;
+    width: calc(100% - 15px); height: 50px;
     background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #fff 90%);
     display: flex;
     flex-direction: column;
@@ -1033,7 +1033,7 @@ button {all: unset; text-align: center; border-radius: 5px; cursor: pointer; dis
 #center01-1 .opt-area .top-effect{
     position: absolute;
     top: 0;left: 0;
-    width: calc(100% - 15px); height: 100px;
+    width: calc(100% - 15px); height: 50px;
     background: linear-gradient(to top, rgba(255, 255, 255, 0) 0%, #fff 100%);
     flex-direction: column;
     justify-content: flex-start;
@@ -1046,7 +1046,7 @@ button {all: unset; text-align: center; border-radius: 5px; cursor: pointer; dis
 #center01-1 .opt-area .bottom-effect{
     position: absolute;
     bottom: 0;left: 0;
-    width: calc(100% - 15px); height: 100px;
+    width: calc(100% - 15px); height: 50px;
     background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #fff 100%);
     display: flex;
     flex-direction: column;
@@ -1222,7 +1222,7 @@ button {all: unset; text-align: center; border-radius: 5px; cursor: pointer; dis
 #event01 .opt-area .top-effect{
     position: absolute;
     top: 0;left: 0;
-    width: calc(100% - 15px); height: 100px;
+    width: calc(100% - 15px); height: 50px;
     background: linear-gradient(to top, rgba(255, 255, 255, 0) 0%, #fff 100%);
     flex-direction: column;
     justify-content: flex-start;
@@ -1235,7 +1235,7 @@ button {all: unset; text-align: center; border-radius: 5px; cursor: pointer; dis
 #event01 .opt-area .bottom-effect{
     position: absolute;
     bottom: 0;left: 0;
-    width: calc(100% - 15px); height: 100px;
+    width: calc(100% - 15px); height: 50px;
     background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #fff 100%);
     display: flex;
     flex-direction: column;
@@ -1254,7 +1254,7 @@ button {all: unset; text-align: center; border-radius: 5px; cursor: pointer; dis
     height: 490px;
     overflow-y: auto;
     padding-right: 10px;
-    padding-top: 10px;
+    padding-top: 15px;
 }
 #event01 .opt-area .opt-box::-webkit-scrollbar-button:vertical {
     background-color: #fff;
@@ -1295,7 +1295,7 @@ button {all: unset; text-align: center; border-radius: 5px; cursor: pointer; dis
 #event01-1 .opt-area .top-effect{
     position: absolute;
     top: 0;left: 0;
-    width: calc(100% - 15px); height: 100px;
+    width: calc(100% - 15px); height: 50px;
     background: linear-gradient(to top, rgba(255, 255, 255, 0) 0%, #fff 100%);
     flex-direction: column;
     justify-content: flex-start;
@@ -1308,7 +1308,7 @@ button {all: unset; text-align: center; border-radius: 5px; cursor: pointer; dis
 #event01-1 .opt-area .bottom-effect{
     position: absolute;
     bottom: 0;left: 0;
-    width: calc(100% - 15px); height: 100px;
+    width: calc(100% - 15px); height: 50px;
     background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #fff 100%);
     display: flex;
     flex-direction: column;
@@ -1327,7 +1327,7 @@ button {all: unset; text-align: center; border-radius: 5px; cursor: pointer; dis
     height: 490px;
     overflow-y: auto;
     padding-right: 10px;
-    padding-top: 10px;
+    padding-top: 15px;
 }
 #event01-1 .opt-area .opt-box::-webkit-scrollbar-button:vertical {
     background-color: #fff;
@@ -1346,6 +1346,12 @@ button {all: unset; text-align: center; border-radius: 5px; cursor: pointer; dis
     width: 100%;
     height: 180px;
     background: #d9d9d9;
+}
+#event01-1 .opt-area .opt-box>img{
+    margin-bottom: 30px;
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
 }
 #event01-1 .opt-area .opt-box p{
     margin-bottom: 100px;
@@ -1440,6 +1446,317 @@ button {all: unset; text-align: center; border-radius: 5px; cursor: pointer; dis
     border-right: 1px solid var(--border);
 }
 
+/* 사물함구입 - 사물함 선택 */ 
+#locker01_wrap>.in{
+    position: relative;
+}
+#locker01_wrap .toast-pop{
+    top: 260px;
+}
+#locker01_wrap .back-arrow{
+    position: absolute;
+    left: -20px; top: 0;
+    transform: translateX(-100%);
+}
+#locker01_wrap .back-arrow img{
+    height: 40px;
+    object-fit: contain;
+}
+#locker01_wrap .tit-area{
+    margin-bottom: 80px;
+}
+#locker01_wrap .locker-area{
+    width: 100%;
+}
+#locker01_wrap .locker-area .color-info{
+    width: 100%;
+    display: flex;
+    margin-bottom: 10px;
+    align-items: center;
+    justify-content: flex-end;
+}
+#locker01_wrap .locker-area .color-info>div{
+    display: flex;
+    align-items: center;
+}
+#locker01_wrap .locker-area .color-info>div:first-child{
+    margin-right: 15px;
+}
+#locker01_wrap .locker-area .color-info>div span{
+    width: 20px; height: 20px;
+    background: #ececec;
+    border-radius: 5px;
+    margin-right: 5px;
+}
+#locker01_wrap .locker-area .color-info>div:last-child span{
+    background: #000;
+}
+#locker01_wrap .locker-area .color-info>div p{
+    color: var(--lightertxt);
+}
+#locker01_wrap .locker-area .locker-select{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 570px;
+    padding: 40px 80px;
+    border: 1px solid var(--border);
+    border-radius: 5px;
+}
+#locker01_wrap .locker-area .locker-select>div{
+    width: 80px; height: 80px;
+    background: #ececec;
+    border-radius: 5px;
+    font-size: var(--fonth4);
+    color: #000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0px 5px;
+    cursor: pointer;
+}
+#locker01_wrap .locker-area .locker-select>div.on{
+    background: #000;
+    color: #fff;
+}
+#locker01_wrap .locker-area .locker-select>div.ex{
+    background: #000;
+    color: #fff;
+}
+#locker01_wrap .modal-pop{
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    background: #fff;
+    width: 726px;
+    height: 348px;
+    box-shadow: 0px 4px 12px rgba(0,0,0,0.4);
+    display: none;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    padding-bottom: 52px;
+}
+#locker01_wrap .modal-pop.on{
+    display: flex;
+}
+#locker01_wrap .modal-pop h4{
+    text-align: center;
+    margin-bottom: 60px;
+}
+#locker01_wrap .modal-pop .btn-area{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 620px;
+}
+#locker01_wrap .modal-pop .btn-area button{
+    width: 300px;
+    height: 70px;
+    background: #ececec;
+    border-radius: 5px;
+    font-size: var(--fonth4);
+    font-weight: 700;
+    text-align: center;
+    line-height: 70px;
+}
+#locker01_wrap .modal-pop .btn-area button:last-child{
+    background: var(--maincolor);
+    color: #fff;
+}
 
+/* 사물함이용기간 */
+#locker02_wrap>.in{
+    position: relative;
+}
+#locker02_wrap .back-arrow{
+    position: absolute;
+    left: -20px; top: 0;
+    transform: translateX(-100%);
+}
+#locker02_wrap .back-arrow img{
+    height: 40px;
+    object-fit: contain;
+}
+#locker02_wrap .tit-area{
+    margin-bottom: 130px;
+}
+#locker02_wrap .lockerper-area{
+    width: 100%;
+}
+#locker02_wrap .lockerper-area>div{
+    width: 100%;
+    height: 80px;
+    border-radius: 5px;
+    border: 1px solid #d9d9d9;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 50px;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+#locker02_wrap .modal{
+    width: 100%;
+    height: 100vh;
+    background: rgba(0,0,0,0.3);
+    position: fixed;
+    z-index: 999;
+    top: 0; left: 0;
+    backdrop-filter: blur(4px);
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+#locker02_wrap .modal.active{
+    display: flex;
+}
 
+#locker02_wrap .modal .gnb-popup{
+    width: 1080px;
+    height: 700px;
+    background: #fff;
+    border-radius: 10px;
+    padding: 50px 60px;
+    display: flex;
+    justify-content: space-between;
+}
+#locker02_wrap .modal .gnb-popup .popup-close img{
+    height: 50px;
+    object-fit: contain;
+}
+#locker02_wrap .modal .gnb-popup iframe{
+    width: 910px;
+    height: 600px;
+}
 
+/*iframe*/
+#pay01 .gnb-popuparea .tit-area{
+    margin-bottom: 110px;
+}
+#pay01 .gnb-popuparea .cont-area{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#pay01 .gnb-popuparea .cont-area .pay-area{
+    width: 100%;
+    border-top: 1px solid #d9d9d9;
+    border-bottom: 1px solid #d9d9d9;
+    padding: 40px 0px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+#pay01 .gnb-popuparea .cont-area .pay-area>div{
+    display: flex;
+    min-width: 350px;
+    max-width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+#pay01 .gnb-popuparea .cont-area .pay-area>div>h4:first-child{
+    width: 140px;
+    border-right: 1px solid #d9d9d9;
+}
+#pay01 .gnb-popuparea .cont-area .pay-area>div>h4:last-child{
+    font-weight: 400;
+}
+#pay01 .gnb-popuparea .cont-area>p{
+    text-align: center;
+    color: #777;
+    margin-bottom: 90px;
+}
+#pay01 .gnb-popuparea .cont-area>button{
+    width: 505px;
+    height: 70px;
+    background: var(--maincolor);
+    border-radius: 5px;
+    font-size: var(--fonth4);
+    color: #fff;
+    font-weight: 700;
+}
+
+#pay02 .gnb-popuparea .cont-area{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#pay02 .gnb-popuparea .cont-area .pay-area{
+    width: 100%;
+    border-top: 1px solid #d9d9d9;
+    border-bottom: 1px solid #d9d9d9;
+    padding: 40px 0px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+#pay02 .gnb-popuparea .cont-area .pay-area>div{
+    display: flex;
+    min-width: 350px;
+    max-width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+#pay02 .gnb-popuparea .cont-area .pay-area>div>h4:first-child{
+    width: 140px;
+    border-right: 1px solid #d9d9d9;
+}
+#pay02 .gnb-popuparea .cont-area .pay-area>div>h4:last-child{
+    font-weight: 400;
+}
+#pay02 .gnb-popuparea .cont-area>img{
+    height: 240px;
+    object-fit: contain;
+    margin: 10px 0px;
+}
+#pay02 .gnb-popuparea .cont-area>h5{
+    text-align: center;
+    font-weight: 400;
+}
+
+#pay03 .gnb-popuparea .cont-area{
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#pay03 .gnb-popuparea .cont-area img{
+    height: 100px;
+    object-fit: contain;
+    margin-bottom: 40px;
+}
+#pay03 .gnb-popuparea .cont-area h2{
+    margin-bottom: 60px;
+    text-align: center;
+}
+#pay03 .gnb-popuparea .cont-area .btn-area{
+    display: flex;
+    justify-content: space-between;
+    width: 490px;
+}
+#pay03 .gnb-popuparea .cont-area .btn-area button{
+    width: 240px;
+    height: 70px;
+    border-radius: 5px;
+    font-weight: 700;
+    font-size: var(--fonth4);
+}
+#pay03 .gnb-popuparea .cont-area .btn-area button:first-child{
+    background: #ececec;
+}
+#pay03 .gnb-popuparea .cont-area .btn-area button:last-child{
+    background: var(--maincolor);
+    color: #fff;
+}

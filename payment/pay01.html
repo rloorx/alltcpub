@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>결제하기</title>
+    <!-- css -->
+    <link rel="stylesheet" href="../common_css/common.css">
+</head>
+<body>
+    <div id="pay01">
+        <div class="gnb-popuparea">
+            <div class="tit-area">
+                <div class="back-area" style="visibility: hidden;" onclick="goBack()">
+                    <img src="../img/main/popup-back.png" alt="이전페이지로">
+                </div>
+                <h2>결제하기</h2>
+            </div>
+            <div class="cont-area">
+                <div class="pay-area">
+                    <div class="pay-item">
+                        <h4>상품명</h4>
+                        <h4>[사물함명] 1개월</h4>
+                    </div>
+                    <div class="pay-charge">
+                        <h4>결제 금액</h4>
+                        <h4>100,000원</h4>
+                    </div>
+                </div>
+                <p>* 영수증은 회원 가입 시 입력한 전화번호로 발송됩니다.</p>
+                <button type="button" onclick="location.href='./pay02.html'">카드 결제하기</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function goBack(){
+            window.history.back();
+        }
+
+    </script>
+</body>
+</html>

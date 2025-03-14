@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>사물함 구입 페이지 - 01 사물함 선택</title>
+
+    <!-- css -->
+    <link rel="stylesheet" href="../common_css/common.css">
+</head>
+<body>
+    <div id="locker01_wrap">
+        <div class="header">
+            <div class="in">
+                <h1><img src="../img/study_logo.png" alt="올티칭 스터디카페"></h1>
+                <ul class="gnb-area">
+                    <li onclick="openPopup()">고객센터</li>
+                    <li onclick="openPopup()">이벤트</li>
+                    <li onclick="openPopup()">요금안내</li>
+                </ul>
+                <p><span style="font-size: inherit;">홍길동</span> 회원님</p>
+                <div class="timer-wrap">
+                    <div class="timer">
+                        <div class="mask"></div>
+                    </div>
+                    <p><span>20</span>초</p>
+                </div>
+                <button type="button" class="logout-btn">로그아웃</button>
+            </div>
+        </div>
+        <div class="in">
+            <div class="back-arrow">
+                <img src="../img/user_join/back-arrow.png" alt="이전페이지로 돌아가기">
+            </div>
+            <div class="tit-area">
+                <h3>사용을 원하는 사물함을<span style="display: block; font-size:inherit;">선택해 주세요.</span></h3>
+            </div>
+            <div class="locker-area">
+                <div class="color-info">
+                    <div>
+                        <span></span><p>사용가능</p>
+                    </div>
+                    <div>
+                        <span></span><p>사용불가</p>
+                    </div>
+                </div>
+                <div class="locker-select">
+                    <div></div><div></div><div></div><div></div><div class="ex"></div><div></div><div></div><div></div><div></div><div></div>
+                    <div></div><div></div><div></div><div></div><div class="ex"></div><div class="ex"></div><div class="ex"></div><div class="ex"></div><div></div><div class="ex"></div>
+                    <div></div><div></div><div></div><div></div><div></div><div></div><div class="ex"></div><div></div><div></div><div></div>
+                    <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+                    <div></div><div></div><div></div>
+                </div>
+                <!-- ex는 임시로 넣어둔거에여 클릭하면 토스트팝업 뜰수있게!!-->
+            </div>
+        </div>
+
+        <!-- 토스트팝업 레이아웃 -->
+        <div class="toast-pop">
+            <p>사용중인 사물함입니다. 다른 사물함을 선택해 주세요.</p>
+        </div>
+        <!-- 토스트팝업 레이아웃End -->    
+
+        <!-- 모달팝업 레이아웃 -->
+        <div class="modal-pop">
+            <h4>선택하신 사물함은 <span style="font-size: inherit;">[사물함명]</span> 입니다.<span style="display: block; font-size: inherit;">해당 사물함으로 이용권을 구입하시겠습니까?</span></h4>
+            <div class="btn-area">
+                <button type="button">취소</button>
+                <button type="button">확인</button>
+            </div>
+        </div>
+        <!-- 모달팝업 레이아웃End -->    
+        
+    </div>
+
+
+    <script>
+        const divs = document.querySelectorAll("#locker01_wrap .locker-area .locker-select>div");
+        const toastPop = document.querySelector("#locker01_wrap .toast-pop");
+        const modalPop = document.querySelector("#locker01_wrap .modal-pop");
+        const popClose = document.querySelector("#locker01_wrap .modal-pop .btn-area>button:first-child");
+        const popNext = document.querySelector("#locker01_wrap .modal-pop .btn-area>button:last-child");
+
+        divs.forEach((div, index) => {
+            div.textContent = index + 1;
+            div.addEventListener("click", () => {
+                div.classList.toggle("on");
+
+                if (div.classList.contains("ex")) {
+                    toastPop.style.display = 'flex';
+                    setTimeout(function() {
+                        toastPop.classList.add('show');
+                    }, 10);
+                    
+                    setTimeout(function() {
+                        toastPop.classList.remove('show');
+                        setTimeout(function() {
+                            toastPop.style.display = 'none';
+                            }, 500);
+                        }, 1500);
+                }else{
+                    modalPop.classList.add("on");
+                }
+            });
+            popClose.addEventListener("click", ()=>{
+                modalPop.classList.remove("on");
+            })
+        }); 
+
+        
+    </script>
+</body>
+</html>
