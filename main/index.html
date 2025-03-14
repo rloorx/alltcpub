@@ -115,6 +115,7 @@
                 <button type="button">확인</button>
             </div>
         </div>
+        <div class="modal-bg"></div>
         <!-- 모달팝업 레이아웃End -->    
         
     </div>
@@ -187,12 +188,15 @@
         // 모달팝업
         const function5 = document.querySelector('#main_wrap .function05');
         const modalPop = document.querySelector('#main_wrap .modal-pop');
+        const modalBg = document.querySelector('#main_wrap .modal-bg');
         const modalclose = document.querySelector('#main_wrap .modal-pop .btn-area button');
 
         function5.addEventListener('click', () => {
+            modalBg.classList.add('on');
             modalPop.classList.add('on');
         });
         modalclose.addEventListener('click', () => {
+            modalBg.classList.remove('on');
             modalPop.classList.remove('on');
         });
 
