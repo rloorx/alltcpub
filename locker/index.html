@@ -44,12 +44,19 @@
                         <span></span><p>사용불가</p>
                     </div>
                 </div>
-                <div class="locker-select">
-                    <div></div><div></div><div></div><div></div><div class="ex"></div><div></div><div></div><div></div><div></div><div></div>
-                    <div></div><div></div><div></div><div></div><div class="ex"></div><div class="ex"></div><div class="ex"></div><div class="ex"></div><div></div><div class="ex"></div>
-                    <div></div><div></div><div></div><div></div><div></div><div></div><div class="ex"></div><div></div><div></div><div></div>
-                    <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
-                    <div></div><div></div><div></div>
+                <div class="locker-select-wrap">
+                    <div class="locker-select-tab">
+                        <div class="select-tab on"><p>1층</p></div>
+                        <div class="select-tab"><p>2층</p></div>
+                        <div class="select-tab"><p>3층</p></div>
+                    </div>
+                    <div class="locker-select">
+                        <div></div><div></div><div></div><div></div><div class="ex"></div><div></div><div></div><div></div><div></div><div></div>
+                        <div></div><div></div><div></div><div></div><div class="ex"></div><div class="ex"></div><div class="ex"></div><div class="ex"></div><div></div><div class="ex"></div>
+                        <div></div><div></div><div></div><div></div><div></div><div></div><div class="ex"></div><div></div><div></div><div></div>
+                        <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+                        <div></div><div></div><div></div>
+                    </div>
                 </div>
                 <!-- ex는 임시로 넣어둔거에여 클릭하면 토스트팝업 뜰수있게!!-->
             </div>
@@ -106,6 +113,20 @@
                 modalPop.classList.remove("on");
             })
         }); 
+
+        const lockerTabs = document.querySelectorAll('#locker01_wrap .locker-area .locker-select-tab > div');
+
+        lockerTabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+            tab.classList.add('on');
+            
+            lockerTabs.forEach(otherTab => {
+            if (otherTab !== tab) {
+                otherTab.classList.remove('on');
+            }
+            });
+        });
+        });
 
         
     </script>
