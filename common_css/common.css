@@ -1484,33 +1484,65 @@ button {all: unset; text-align: center; border-radius: 5px; cursor: pointer; dis
 }
 #locker01_wrap .locker-area .color-info>div span{
     width: 20px; height: 20px;
-    background: #ececec;
+    background: #fff;
+    border: 1px solid var(--maincolor);
     border-radius: 5px;
     margin-right: 5px;
 }
 #locker01_wrap .locker-area .color-info>div:last-child span{
-    background: #000;
+    background: #d9d9d9;
+    border: none;
 }
 #locker01_wrap .locker-area .color-info>div p{
     color: var(--lightertxt);
+}
+#locker01_wrap .locker-area .locker-select-wrap{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+#locker01_wrap .locker-area .locker-select-tab>div{
+    width: 130px;
+    height: 60px;
+    border-radius: 5px;
+    border: 1px solid var(--maincolor);
+    color: var(--maincolor);
+    font-weight: 700;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+#locker01_wrap .locker-area .locker-select-tab>div>p{
+    font-size: var(--fonth5);
+}
+#locker01_wrap .locker-area .locker-select-tab>div.on{
+    border: none;
+    background: var(--maincolor);
+    color: #fff;
 }
 #locker01_wrap .locker-area .locker-select{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    width: 100%;
+    width: 875px;
     height: 570px;
-    padding: 40px 80px;
+    padding: 40px 40px;
     border: 1px solid var(--border);
     border-radius: 5px;
 }
 #locker01_wrap .locker-area .locker-select>div{
-    width: 80px; height: 80px;
-    background: #ececec;
+    width: 70px; height: 70px;
+    background: #fff;
+    border: 1px solid var(--maincolor);
     border-radius: 5px;
     font-size: var(--fonth4);
-    color: #000;
+    font-weight: 700;
+    color: var(--maincolor);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1519,12 +1551,14 @@ button {all: unset; text-align: center; border-radius: 5px; cursor: pointer; dis
     cursor: pointer;
 }
 #locker01_wrap .locker-area .locker-select>div.on{
-    background: #000;
+    background: var(--maincolor);
     color: #fff;
 }
 #locker01_wrap .locker-area .locker-select>div.ex{
-    background: #000;
+    background: #d9d9d9;
+    border: none;
     color: #fff;
+    font-weight: 400;
 }
 #locker01_wrap .modal-pop{
     position: absolute;
