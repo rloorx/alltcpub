@@ -101,6 +101,23 @@
             <p>이미 좌석을 이용 중입니다. 퇴실 후 다시 시도해 주세요.</p>
         </div>
         <!-- 토스트팝업 레이아웃End -->    
+
+        <!-- 모달팝업 레이아웃 -->
+        <div class="modal-pop">
+            <h4>사물함 이용 제한</h4>
+            <h5>아래 이용권을 먼저 구입하셔야 사물함을 이용할 수 있습니다.</h5>
+            <div class="h5-box">
+                <h5>· 자유석 시간권</h5>
+                <h5>· 자유석 기간권</h5>
+                <h5>· 고정석 기간권</h5>
+            </div>
+            <div class="btn-area">
+                <button type="button">확인</button>
+            </div>
+        </div>
+        <div class="modal-bg"></div>
+        <!-- 모달팝업 레이아웃End -->    
+        
     </div>
 
 
@@ -165,6 +182,22 @@
                     iframe.src = "./gnb03_popup.html"; 
                 }
             });
+        });
+
+
+        // 모달팝업
+        const function5 = document.querySelector('#main_wrap .function05');
+        const modalPop = document.querySelector('#main_wrap .modal-pop');
+        const modalBg = document.querySelector('#main_wrap .modal-bg');
+        const modalclose = document.querySelector('#main_wrap .modal-pop .btn-area button');
+
+        function5.addEventListener('click', () => {
+            modalBg.classList.add('on');
+            modalPop.classList.add('on');
+        });
+        modalclose.addEventListener('click', () => {
+            modalBg.classList.remove('on');
+            modalPop.classList.remove('on');
         });
 
 </script>
