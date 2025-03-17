@@ -48,6 +48,7 @@ button {all: unset; text-align: center; border-radius: 5px; cursor: pointer; dis
     margin-bottom: 80px;
     display: flex;
     align-items: center;
+    border-bottom: 1px solid var(--border);
 }
 .header .in{
     display: flex;
@@ -888,9 +889,6 @@ button {all: unset; text-align: center; border-radius: 5px; cursor: pointer; dis
     color: #fff;
 }
 
-#main_wrap .header{
-    border-bottom: 1px solid var(--border);
-}
 #main_wrap>.in{
     height: calc(100vh - 180px);
     padding-bottom: 100px;
@@ -2344,3 +2342,99 @@ button {all: unset; text-align: center; border-radius: 5px; cursor: pointer; dis
     color: #fff;
 }
 /* 퇴실좌석선택페이지End */
+
+/* 이용권구입 - 좌석유형/사용유형/자유석 시간권 시간선택/고정석 이용권 기간 선택 모두 레이아웃 같습니다!! */
+.ticket_wrap >.in{
+    position: relative;
+}
+.ticket_wrap .back-arrow{
+    position: absolute;
+    left: -20px; top: 0;
+    transform: translateX(-100%);
+}
+.ticket_wrap .back-arrow img{
+    height: 40px;
+    object-fit: contain;
+}
+.ticket_wrap .tit-area{
+    margin-bottom: 80px;
+}
+.ticket_wrap .ticket-area{
+    width: 100%;
+    height: 520px;
+    position: relative;
+}
+.ticket_wrap .ticket-area .top-effect{
+    position: absolute;
+    top: 0;left: 0;
+    width: calc(100% - 15px); height: 70px;
+    background: linear-gradient(to top, rgba(255, 255, 255, 0) 0%, #fff 90%);
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    display: none;
+}
+.ticket_wrap .ticket-area .top-effect.show{
+    display: flex;
+}
+.ticket_wrap .ticket-area .bottom-effect{
+    position: absolute;
+    bottom: 0;left: 0;
+    width: calc(100% - 15px); height: 70px;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #fff 90%);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+}
+.ticket_wrap .ticket-area .bottom-effect.hide{
+    display: none;
+}
+.ticket_wrap .ticket-area .bottom-effect img{
+    height: 25px;
+    object-fit: contain;
+}
+.ticket_wrap .ticket-area .opt-box{
+    width: 100%;
+    height: 520px;
+    overflow-y: auto;
+    padding-right: 10px;
+    padding-top: 15px;
+}
+.ticket_wrap .ticket-area .opt-box::-webkit-scrollbar-button:vertical {
+    background-color: #fff;
+}
+.ticket_wrap .ticket-area .opt-box::-webkit-scrollbar-track {
+    background-color: #fff;
+}
+.ticket_wrap .ticket-area .opt-box::-webkit-scrollbar-thumb {
+    background-color: #ccc;
+}
+.ticket_wrap .ticket-area .opt-box::-webkit-scrollbar {
+    width: 5px;
+}
+.ticket_wrap .ticket-area>.opt-box>div{
+    width: 100%;
+    height: 80px;
+    border-radius: 5px;
+    border: 1px solid #d9d9d9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 50px;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+.ticket_wrap .ticket-area>.opt-box>.opt-sb{
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+.ticket_wrap .ticket-area>.opt-box>.opt-sb>h4:last-child{
+    font-weight: 400;
+}
+.ticket_wrap .ticket-area>.opt-box>div:last-child{
+    margin-bottom: 15px;
+}
+.ticket_wrap .seat-area{
+    margin-top: 45px;
+}
