@@ -50,25 +50,39 @@
                 <h3><span style="font-size: inherit;">[사물함명]</span> 사물함 이용 기간을<span style="display: block; font-size:inherit;">선택해 주세요.</span></h3>
             </div>
             <div class="lockerper-area">
-                <div onclick="openPopup()">
-                    <h4>1개월</h4>
-                    <h4>100,000원</h4>
-                </div>                
-                <div onclick="openPopup()">
-                    <h4>2개월</h4>
-                    <h4>100,000원</h4>
+                <div class="top-effect"></div>
+                <div class="bottom-effect">
                 </div>
-                <div onclick="openPopup()">
-                    <h4>3개월</h4>
-                    <h4>100,000원</h4>
-                </div>
-                <div onclick="openPopup()">
-                    <h4>4개월</h4>
-                    <h4>100,000원</h4>
-                </div>
-                <div onclick="openPopup()">
-                    <h4>5개월</h4>
-                    <h4>100,000원</h4>
+                <div class="opt-box">
+                    <div onclick="openPopup()">
+                        <h4>1개월</h4>
+                        <h4>100,000원</h4>
+                    </div>                
+                    <div onclick="openPopup()">
+                        <h4>2개월</h4>
+                        <h4>100,000원</h4>
+                    </div>
+                    <div onclick="openPopup()">
+                        <h4>3개월</h4>
+                        <h4>100,000원</h4>
+                    </div>
+                    <div onclick="openPopup()">
+                        <h4>4개월</h4>
+                        <h4>100,000원</h4>
+                    </div>
+                    <div onclick="openPopup()">
+                        <h4>5개월</h4>
+                        <h4>100,000원</h4>
+                    </div>
+                    <div onclick="openPopup()">
+                        <h4>5개월</h4>
+                        <h4>100,000원</h4>
+                    </div>
+                    <div onclick="openPopup()">
+                        <h4>5개월</h4>
+                        <h4>100,000원</h4>
+                    </div>
+
                 </div>
             </div>
         </div>        
@@ -85,6 +99,25 @@
             document.querySelector("#locker02_wrap .modal").classList.remove("active")
         }
         
+        document.addEventListener("DOMContentLoaded", function () {
+        const optArea2 = document.querySelector("#locker02_wrap .opt-box");
+        const arrowImg2 = document.querySelector("#locker02_wrap .bottom-effect");
+        const topBg2 = document.querySelector("#locker02_wrap .top-effect");
+
+        optArea2.addEventListener("scroll", function () {
+            const currentScroll2 = optArea2.scrollTop + optArea2.clientHeight;
+            const maxScroll2 = optArea2.scrollHeight;
+
+            if (currentScroll2 >= maxScroll2) {
+            arrowImg2.classList.add("hide");
+            topBg2.classList.add("show");
+            } else {
+            arrowImg2.classList.remove("hide");
+            topBg2.classList.remove("show");
+            }
+        });
+    });    
+
     </script>
 </body>
 </html>
