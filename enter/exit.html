@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>퇴실 - 퇴실 좌석 선택</title>
+
+    <!-- css -->
+    <link rel="stylesheet" href="../common_css/common.css">
+</head>
+<body>
+    <div id="exit_wrap">
+        
+        <div class="header">
+            <div class="in">
+                <h1><img src="../img/study_logo.png" alt="올티칭 스터디카페"></h1>
+                <ul class="gnb-area">
+                    <li onclick="openPopup()">고객센터</li>
+                    <li onclick="openPopup()">이벤트</li>
+                    <li onclick="openPopup()">요금안내</li>
+                </ul>
+                <p><span style="font-size: inherit;">홍길동</span> 회원님</p>
+                <div class="timer-wrap">
+                    <div class="timer">
+                        <div class="mask"></div>
+                    </div>
+                    <p><span>20</span>초</p>
+                </div>
+                <button type="button" class="logout-btn">로그아웃</button>
+            </div>
+        </div>
+        <div class="in">
+            <div class="back-arrow">
+                <img src="../img/user_join/back-arrow.png" alt="이전페이지로 돌아가기">
+            </div>
+            <div class="tit-area">
+                <h3>퇴실할 좌석을 선택해 주세요.</h3>
+            </div>
+            <div class="exit-con">
+                <h2>[좌석명]</h2>
+                <div class="h3-box">
+                    <h3>사용중인 이용권<span style="font-size: inherit; font-weight: 400;">: 자유석 시간권 60시간</span></h3>
+                    <h3>총 이용 시간<span style="font-size: inherit; font-weight: 400;">: 1시간 30분</span></h3>
+                    <h3>잔여 이용 시간<span style="font-size: inherit; font-weight: 400;">: 58시간 30분</span></h3>
+                    <h3 class="h3-last">* 퇴실 시 이용권이 소멸되며, 재입실 할 수 없습니다.</h3>
+                </div>
+                <div class="btn-area">
+                    <button type="button" onclick="closePopup()">취소</button>
+                    <button type="button" onclick="closePopup()">확인</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+</html>

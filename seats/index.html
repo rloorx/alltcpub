@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>좌석 배치도 페이지</title>
+
+    <!-- css -->
+    <link rel="stylesheet" href="../common_css/common.css">
+</head>
+<body>
+    <div id="seats_wrap">
+        <div class="header">
+            <div class="in">
+                <h1><img src="../img/study_logo.png" alt="올티칭 스터디카페"></h1>
+                <ul class="gnb-area">
+                    <li>고객센터</li>
+                    <li>이벤트</li>
+                    <li>요금안내</li>
+                </ul>
+                <p><span style="font-size: inherit;">홍길동</span> 회원님</p>
+                <div class="timer-wrap">
+                    <div class="timer">
+                        <div class="mask"></div>
+                    </div>
+                    <p><span>20</span>초</p>
+                </div>
+                <button type="button" class="logout-btn">로그아웃</button>
+            </div>
+        </div>
+        <div class="in">
+            <div class="back-arrow">
+                <img src="../img/user_join/back-arrow.png" alt="이전페이지로 돌아가기">
+            </div>
+            <div class="tit-area">
+                <h3>원하는 좌석을 선택해 주세요.</h3>
+            </div>
+            <div class="seats-area">
+                <div class="top-area">
+                    <select>
+                        <option value="1">1층</option>
+                        <option value="2">2층</option>
+                        <option value="3">3층</option>
+                    </select>
+                    <div class="color-info">
+                        <div>
+                            <span></span><p>사용가능</p>
+                        </div>
+                        <div>
+                            <span></span><p>사용불가</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="seat-select">
+                    <img src="../img/seats/seat-img.png" alt="좌석배치도">
+                </div>
+            </div>
+        </div>
+
+        <!-- 토스트팝업 레이아웃 -->
+        <div class="toast-pop">
+            <p>사용중인 좌석입니다. 다른 좌석을 선택해 주세요.</p>
+        </div>
+        <!-- 토스트팝업 레이아웃End -->    
+
+        <!-- 모달팝업 레이아웃 -->
+         <!-- 모달팝업 - 버튼2개일때 레이아웃 -->
+        <div class="modal-pop on">
+            <h4>[선택 좌석명] 좌석으로 입실하시겠습니까?</h4>
+            <div class="h5-box"> <!--없는 경우엔 그냥 삭제하고 쓰시면 됩니당!!-->
+                <h5>선택한 이용권<span style="font-size: inherit; font-weight: 400;">: 자유석 시간권 6개월</span></h5>
+                <h5>잔여 시간<span style="font-size: inherit; font-weight: 400;">: 54시간 30분</span></h5>
+                <h5>이용 기간<span style="font-size: inherit; font-weight: 400;">: 2025-01-01 ~ 2025-07-01</span></h5>
+            </div>
+            <div class="btn-area">
+                <button type="button" onclick="closePopup()">취소</button>
+                <button type="button" onclick="closePopup()">확인</button>
+            </div>
+        </div>
+
+        <!-- 모달팝업 - 버튼3개일때 레이아웃 -->
+        <div class="modal-pop">
+            <h4>[선택 좌석명] 좌석으로 입실하시겠습니까?</h4>
+            <div class="btn-area-3">
+                <button type="button" onclick="closePopup()">취소</button>
+                <button type="button">좌석 이동하기</button>
+                <button type="button">이용권 연장</button>
+            </div>
+        </div>
+
+        <!-- 모달팝업 - 뒷배경 효과 -->
+        <div class="modal-bg on"></div>
+        <!-- 모달팝업 레이아웃End -->    
+        
+    </div>
+
+
+    <script>
+        function closePopup(){
+            document.querySelector("#seats_wrap .modal-bg").classList.remove("on")
+            document.querySelector("#seats_wrap .modal-pop").classList.remove("on")
+        }
+
+        setTimeout(function() {
+        const toast = document.querySelector('#seats_wrap .toast-pop');
+
+        toast.style.display = 'flex';
+        setTimeout(function() {
+            toast.classList.add('show');
+        }, 10);
+        
+        setTimeout(function() {
+            toast.classList.remove('show');
+            setTimeout(function() {
+                toast.style.display = 'none';
+                }, 500);
+            }, 1500);
+        }, 1000);       
+        // 토스트팝업End
+        
+    </script>
+</body>
+</html>

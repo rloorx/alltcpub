@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>입실 - 입실/퇴실 완료 페이지</title>
+
+    <!-- css -->
+    <link rel="stylesheet" href="../common_css/common.css">
+</head>
+<body>
+    <div id="enter-exit_wrap">
+        <div class="header">
+            <div class="in">
+                <h1><img src="../img/study_logo.png" alt="올티칭 스터디카페"></h1>
+                <ul class="gnb-area">
+                    <li onclick="openPopup()">고객센터</li>
+                    <li onclick="openPopup()">이벤트</li>
+                    <li onclick="openPopup()">요금안내</li>
+                </ul>
+                <p><span style="font-size: inherit;">홍길동</span> 회원님</p>
+                <div class="timer-wrap">
+                    <div class="timer">
+                        <div class="mask"></div>
+                    </div>
+                    <p><span>20</span>초</p>
+                </div>
+                <button type="button" class="logout-btn">로그아웃</button>
+            </div>
+        </div>
+        <div class="in">
+            <div class="enter-con">
+                <img src="../img/user_join/fin-check.png">
+                <h2>입실 처리 되었습니다.</h2>
+                <h3>자동으로 로그아웃 됩니다.</h3>
+            </div>
+            <div class="exit-con" style="display: none;">
+                <img src="../img/user_join/fin-check.png">
+                <h2>퇴실 처리 되었습니다.</h2>
+                <h3>자동으로 로그아웃 됩니다.</h3>
+            </div>
+        </div>        
+    </div>
+
+
+</body>
+</html>
