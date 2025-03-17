@@ -10,19 +10,6 @@
 </head>
 <body>
     <div id="enter_wrap">
-        <!--gnb팝업 -->
-        <div class="modal">
-            <div class="gnb-popup">
-                <div class="popup-iframe">
-                    <iframe src="../payment/pay01.html" frameborder="0" class="pop-iframe"></iframe>
-                    <!-- 스크립트로 src 변경 -->
-                </div>
-                <div class="popup-close" onclick="closePopup()">
-                    <img src="../img/main/popup-close.png" alt="팝업 닫기">
-                </div>
-            </div>
-        </div>
-        <!-- gnb팝업End -->
         
         <div class="header">
             <div class="in">
@@ -61,64 +48,88 @@
                 <div class="opt-box">
                     <div onclick="openPopup()">
                         <h4>자유석 시간권 60시간</h4>
-                        <h4>100,000원</h4>
+                        <h4>54시간 30분</h4>
+                        <p>2025-01-01<br>~ 2025-03-01</p>
                     </div>                
                     <div onclick="openPopup()">
-                        <h4>2개월</h4>
-                        <h4>100,000원</h4>
+                        <h4>자유석 일일권 1시간</h4>
+                        <h4>1시간</h4>
+                        <p>2025-01-01<br>~ 2025-01-01</p>
                     </div>
                     <div onclick="openPopup()">
-                        <h4>3개월</h4>
-                        <h4>100,000원</h4>
+                        <h4>자유석 기간권 2개월</h4>
+                        <h4>기간 내 자유 사용</h4>
+                        <p>2025-01-01<br>~ 2025-03-01</p>
                     </div>
                     <div onclick="openPopup()">
-                        <h4>4개월</h4>
-                        <h4>100,000원</h4>
+                        <h4>고정석 기간권 6개월</h4>
+                        <h4>기간 내 자유 사용</h4>
+                        <p>2025-01-01<br>~ 2025-07-01</p>
                     </div>
                     <div onclick="openPopup()">
-                        <h4>5개월</h4>
-                        <h4>100,000원</h4>
+                        <h4>자유석 시간권 60시간</h4>
+                        <h4>54시간 30분</h4>
+                        <p>2025-01-01<br>~ 2025-03-01</p>
                     </div>
                     <div onclick="openPopup()">
-                        <h4>5개월</h4>
-                        <h4>100,000원</h4>
+                        <h4>자유석 시간권 60시간</h4>
+                        <h4>54시간 30분</h4>
+                        <p>2025-01-01<br>~ 2025-03-01</p>
                     </div>
                     <div onclick="openPopup()">
-                        <h4>5개월</h4>
-                        <h4>100,000원</h4>
+                        <h4>자유석 시간권 60시간</h4>
+                        <h4>54시간 30분</h4>
+                        <p>2025-01-01<br>~ 2025-03-01</p>
                     </div>
-
                 </div>
             </div>
         </div>        
+        <!-- 모달팝업 레이아웃 -->
+        <div class="modal-pop">
+            <h4>[고정 좌석명] 좌석으로 입실하시겠습니까?</h4>
+            <div class="h5-box">
+                <h5>선택한 이용권<span style="font-size: inherit; font-weight: 400;">: 고정석 기간권 6개월</span></h5>
+                <h5>이용 기간<span style="font-size: inherit; font-weight: 400;">: 2025-01-01 ~ 2025-07-01</span></h5>
+            </div>
+            <div class="btn-area">
+                <button type="button" onclick="closePopup()">취소</button>
+                <button type="button" onclick="closePopup()">확인</button>
+            </div>
+        </div>
+        <!-- 모달팝업 뒷배경 추가 -->
+        <div class="modal-bg"></div>
+        <!-- 모달팝업 레이아웃End -->    
+    
     </div>
 
 
     <script>
         // 팝업 활성화
         function openPopup(){
-            document.querySelector("#locker02_wrap .modal").classList.add("active")
+            document.querySelector("#enter_wrap .modal-pop").classList.add("on")
+            document.querySelector("#enter_wrap .modal-bg").classList.add("on")
         }
 
         function closePopup(){
-            document.querySelector("#locker02_wrap .modal").classList.remove("active")
+            document.querySelector("#enter_wrap .modal-bg").classList.remove("on")
+            document.querySelector("#enter_wrap .modal-pop").classList.remove("on")
         }
         
         document.addEventListener("DOMContentLoaded", function () {
-        const optArea2 = document.querySelector("#locker02_wrap .opt-box");
-        const arrowImg2 = document.querySelector("#locker02_wrap .bottom-effect");
-        const topBg2 = document.querySelector("#locker02_wrap .top-effect");
+        const optArea3 = document.querySelector("#enter_wrap .opt-box");
+        const arrowImg3 = document.querySelector("#enter_wrap .bottom-effect");
+        const topBg3 = document.querySelector("#enter_wrap .top-effect");
 
-        optArea2.addEventListener("scroll", function () {
-            const currentScroll2 = optArea2.scrollTop + optArea2.clientHeight;
-            const maxScroll2 = optArea2.scrollHeight;
+        optArea3.addEventListener("scroll", function () {
+            const currentScroll3 = optArea3.scrollTop + optArea3.clientHeight;
+            const maxScroll3 = optArea3.scrollHeight;
 
-            if (currentScroll2 >= maxScroll2) {
-            arrowImg2.classList.add("hide");
-            topBg2.classList.add("show");
+            if (currentScroll3 >= maxScroll3) {
+            arrowImg3.classList.add("hide");
+            topBg3.classList.add("show");
             } else {
-            arrowImg2.classList.remove("hide");
-            topBg2.classList.remove("show");
+            arrowImg3.classList.remove("hide");
+            topBg3.classList.remove("show");
             }
         });
     });    
