@@ -3,18 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>사물함 구입 페이지 - 02 사물함 이용 기간 선택</title>
+    <title>입실 - 1. 이용권 선택</title>
 
     <!-- css -->
     <link rel="stylesheet" href="../common_css/common.css">
 </head>
 <body>
-    <div id="locker02_wrap">
+    <div id="enter_wrap">
         <!--gnb팝업 -->
         <div class="modal">
             <div class="gnb-popup">
                 <div class="popup-iframe">
-                    <iframe src="../main/gnb01_popup.html" frameborder="0" class="pop-iframe"></iframe>
+                    <iframe src="../payment/pay01.html" frameborder="0" class="pop-iframe"></iframe>
                     <!-- 스크립트로 src 변경 -->
                 </div>
                 <div class="popup-close" onclick="closePopup()">
@@ -47,15 +47,20 @@
                 <img src="../img/user_join/back-arrow.png" alt="이전페이지로 돌아가기">
             </div>
             <div class="tit-area">
-                <h3><span style="font-size: inherit;">[사물함명]</span> 사물함 이용 기간을<span style="display: block; font-size:inherit;">선택해 주세요.</span></h3>
+                <h3>입실 시 사용할<span style="display: block; font-size:inherit;">이용권을 선택해 주세요.</span></h3>
             </div>
-            <div class="lockerper-area">
+            <div class="opt-titarea">
+                <p>이용권</p>
+                <p>잔여 시간</p>
+                <p>이용 기간</p>
+            </div>
+            <div class="opt-area">
                 <div class="top-effect"></div>
                 <div class="bottom-effect">
                 </div>
                 <div class="opt-box">
                     <div onclick="openPopup()">
-                        <h4>1개월</h4>
+                        <h4>자유석 시간권 60시간</h4>
                         <h4>100,000원</h4>
                     </div>                
                     <div onclick="openPopup()">
