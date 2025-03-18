@@ -212,6 +212,9 @@ button {all: unset; text-align: center; border-radius: 5px; cursor: pointer; dis
 
 
 /* 관리자로그인페이지 */
+#adminlogin_wrap .header{
+    border-bottom: none;
+}
 #adminlogin_wrap .in{
     height: 100vh;
     display: flex;
@@ -276,6 +279,9 @@ button {all: unset; text-align: center; border-radius: 5px; cursor: pointer; dis
 /* 관리자로그인페이지End */
 
 /* 관리자키오스크기기선택페이지 */
+#adminoption_wrap .header{
+    border-bottom: none;
+}
 #adminoption_wrap .in{
     width: 820px;
     height: 100vh;
@@ -410,6 +416,9 @@ button {all: unset; text-align: center; border-radius: 5px; cursor: pointer; dis
 }
 
 /* 사용자 로그인 페이지 */
+#userlogin_wrap .header{
+    border-bottom: none;
+}
 #userlogin_wrap .tit-area{
     margin-bottom: 80px;
 }
@@ -574,6 +583,9 @@ button {all: unset; text-align: center; border-radius: 5px; cursor: pointer; dis
 }
 
 /* 사용자회원가입페이지 */
+#userjoin_wrap .header{
+    border-bottom: none;
+}
 #userjoin_wrap>.in{
     position: relative;
 }
@@ -782,6 +794,9 @@ button {all: unset; text-align: center; border-radius: 5px; cursor: pointer; dis
 /* 사용자회원가입페이지End */
 
 /* 사용자회원가입완료페이지 */
+#userjoinfin_wrap .header{
+    border-bottom: none;
+}
 #userjoinfin_wrap>.in{
     height: calc(100vh - 250px);
     display: flex;
@@ -2129,11 +2144,12 @@ button {all: unset; text-align: center; border-radius: 5px; cursor: pointer; dis
     margin-bottom: 10px;
 }
 #seats_wrap .seats-area .top-area select{
-    width: 130px;
+    width: 150px;
     height: 60px;
     border: 1px solid var(--border);
     border-radius: 5px;
     padding: 0 10px;
+    font-size: var(--fonth5);
 }
 #seats_wrap .seats-area .color-info{
     width: 100%;
@@ -2438,3 +2454,211 @@ button {all: unset; text-align: center; border-radius: 5px; cursor: pointer; dis
 .ticket_wrap .seat-area{
     margin-top: 45px;
 }
+
+#studyroom02_wrap.ticket_wrap .tit-area{
+    margin-bottom: 110px;
+}
+
+/* 스터디룸 시간 선택 */ 
+#studyroom03_wrap>.in{
+    position: relative;
+}
+#studyroom03_wrap .toast-pop{
+    top: 260px;
+}
+#studyroom03_wrap .back-arrow{
+    position: absolute;
+    left: -20px; top: 0;
+    transform: translateX(-100%);
+}
+#studyroom03_wrap .back-arrow img{
+    height: 40px;
+    object-fit: contain;
+}
+#studyroom03_wrap .tit-area{
+    margin-bottom: 40px;
+}
+#studyroom03_wrap .studyroom-area{
+    width: 100%;
+}
+#studyroom03_wrap .studyroom-area .top-area{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 10px;
+}
+#studyroom03_wrap .studyroom-area .top-area select{
+    width: 300px;
+    height: 60px;
+    border: 1px solid var(--border);
+    border-radius: 5px;
+    padding: 0 10px;
+    font-size: var(--fonth5);
+}
+#studyroom03_wrap .studyroom-area .color-info{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+#studyroom03_wrap .studyroom-area .color-info>div{
+    display: flex;
+    align-items: center;
+}
+#studyroom03_wrap .studyroom-area .color-info>div:first-child{
+    margin-right: 15px;
+}
+#studyroom03_wrap .studyroom-area .color-info>div span{
+    width: 20px; height: 20px;
+    background: #fff;
+    border: 1px solid var(--maincolor);
+    border-radius: 5px;
+    margin-right: 5px;
+}
+#studyroom03_wrap .studyroom-area .color-info>div:last-child span{
+    background: #d9d9d9;
+    border: none;
+}
+#studyroom03_wrap .studyroom-area .color-info>div p{
+    color: var(--lightertxt);
+}
+#studyroom03_wrap .studyroom-area .studyroom-select{
+    width: 100%;
+    height: 520px;
+    padding: 0px 50px;
+    border: 1px solid var(--border);
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+#studyroom03_wrap .studyroom-area .studyroom-scroll{
+    width: 100%;
+    height: 490px;
+    overflow-y: auto;
+    padding-right: 10px;
+    padding-top: 30px;
+    padding-bottom: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+#studyroom03_wrap .studyroom-area .studyroom-scroll::-webkit-scrollbar-button:vertical {
+    background-color: #fff;
+}
+#studyroom03_wrap .studyroom-area .studyroom-scroll::-webkit-scrollbar-track {
+    background-color: #fff;
+}
+#studyroom03_wrap .studyroom-area .studyroom-scroll::-webkit-scrollbar-thumb {
+    background-color: #ccc;
+}
+#studyroom03_wrap .studyroom-area .studyroom-scroll::-webkit-scrollbar {
+    width: 5px;
+}
+#studyroom03_wrap .studyroom-area .studyroom-scroll>div{
+    width: 200px;
+    height: 60px;
+    border-radius: 5px;
+    border: 1px solid var(--maincolor);
+    color: var(--maincolor);
+    font-weight: 700;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+#studyroom03_wrap .studyroom-area .studyroom-scroll>div:last-child{
+    margin-bottom: 15px;
+}
+#studyroom03_wrap .studyroom-area .studyroom-scroll>div.on{
+    border: none;
+    background: var(--maincolor);
+    color: #fff;
+}
+#studyroom03_wrap .studyroom-area .studyroom-scroll>div.ex{
+    background: #d9d9d9;
+    border: none;
+    color: #fff;
+    font-weight: 400;
+}
+#studyroom03_wrap .studyroom-area>button{
+    width: 505px;
+    height: 70px;
+    border-radius: 5px;
+    background: #b4cbcd;
+    color: #fff;
+    font-size: var(--fonth4);
+    font-weight: 700;
+    display: block;
+    margin: 0 auto;
+}
+#studyroom03_wrap .studyroom-area>button.active{
+    background: #025157;
+}
+#studyroom03_wrap .modal-pop{
+    position: absolute;
+    top: 50%; left: 50%;
+    z-index: 9999;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    background: #fff;
+    width: 726px;
+    box-shadow: 0px 4px 12px rgba(0,0,0,0.4);
+    display: none;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    padding-bottom: 52px;
+    padding-top: 52px;
+}
+#studyroom03_wrap .modal-pop.on{
+    display: flex;
+}
+#studyroom03_wrap .modal-pop h4{
+    text-align: center;
+    margin-bottom: 30px;
+}
+#studyroom03_wrap .modal-pop .h5-box{
+    margin-bottom: 40px;
+    text-align: center;
+}
+#studyroom03_wrap .modal-pop .h5-box h5{
+    margin-bottom: 10px;
+}
+#studyroom03_wrap .modal-pop .btn-area{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 620px;
+}
+#studyroom03_wrap .modal-pop .btn-area button{
+    width: 300px;
+    height: 70px;
+    background: #ececec;
+    border-radius: 5px;
+    font-size: var(--fonth4);
+    font-weight: 700;
+    text-align: center;
+    line-height: 70px;
+}
+#studyroom03_wrap .modal-pop .btn-area button:last-child{
+    background: var(--maincolor);
+    color: #fff;
+}
+#studyroom03_wrap .modal-bg{
+    width: 100%;
+    height: 100vh;
+    background: rgba(0,0,0,0.3);
+    position: fixed;
+    z-index: 999;
+    top: 0; left: 0;
+    backdrop-filter: blur(4px);
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+#studyroom03_wrap .modal-bg.on{
+    display: flex;
+}
+
