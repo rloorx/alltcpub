@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>스터디룸 - 03. 스터디룸 이용 시간 선택</title>
+
+    <!-- css -->
+    <link rel="stylesheet" href="../common_css/common.css">
+</head>
+<body>
+    <div id="studyroom03_wrap">
+        <div class="header">
+            <div class="in">
+                <h1><img src="../img/study_logo.png" alt="올티칭 스터디카페"></h1>
+                <ul class="gnb-area">
+                    <li onclick="openPopup()">고객센터</li>
+                    <li onclick="openPopup()">이벤트</li>
+                    <li onclick="openPopup()">요금안내</li>
+                </ul>
+                <p><span style="font-size: inherit;">홍길동</span> 회원님</p>
+                <div class="timer-wrap">
+                    <div class="timer">
+                        <div class="mask"></div>
+                    </div>
+                    <p><span>20</span>초</p>
+                </div>
+                <button type="button" class="logout-btn">로그아웃</button>
+            </div>
+        </div>
+        <div class="in">
+            <div class="back-arrow">
+                <img src="../img/user_join/back-arrow.png" alt="이전페이지로 돌아가기">
+            </div>
+            <div class="tit-area">
+                <h3>1월 8일, [스터디룸명]<span style="display: block; font-size:inherit;">이용 시간을 선택해 주세요.</span></h3>
+            </div>
+            <div class="studyroom-area">
+                <div class="top-area">
+                    <select>
+                        <option value="1">1시간 | 10,000원</option>
+                        <option value="2">2시간 | 20,000원</option>
+                        <option value="3">3시간 | 30,000원</option>
+                    </select>
+                    <div class="color-info">
+                        <div>
+                            <span></span><p>예약가능</p>
+                        </div>
+                        <div>
+                            <span></span><p>예약불가</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="studyroom-select">
+                    <div class="studyroom-scroll">
+                        <div><h4>09:00</h4></div>
+                        <div><h4>09:15</h4></div>
+                        <div><h4>09:30</h4></div>
+                        <div><h4>09:45</h4></div>
+                        <div class="ex"><h4>10:00</h4></div>
+                        <div class="ex"><h4>10:15</h4></div>
+                        <div class="ex"><h4>10:30</h4></div>
+                        <div class="ex"><h4>10:45</h4></div>
+                        <div><h4>11:00</h4></div>
+                        <div><h4>11:15</h4></div>
+                        <div><h4>11:30</h4></div>
+                        <div><h4>11:45</h4></div>
+                        <div><h4>12:00</h4></div>
+                        <div><h4>12:15</h4></div>
+                        <div><h4>12:30</h4></div>
+                        <div><h4>12:45</h4></div>
+                        <div><h4>13:00</h4></div>
+                        <div><h4>13:15</h4></div>
+                        <div><h4>13:30</h4></div>
+                        <div><h4>13:45</h4></div>
+                        <div><h4>14:00</h4></div>
+                        <div><h4>14:15</h4></div>
+                        <div><h4>14:30</h4></div>
+                        <div><h4>14:45</h4></div>
+                        <div><h4>14:00</h4></div>
+                        <div><h4>14:15</h4></div>
+                        <div><h4>14:30</h4></div>
+                        <div><h4>14:45</h4></div>
+                    </div>
+                </div>
+                <button type="button">예약하기</button>
+            </div>
+        </div>
+
+        <!-- 토스트팝업 레이아웃 -->
+        <div class="toast-pop">
+            <p>예약되어있는 시간입니다. 다른 시간을 선택해 주세요.</p>
+        </div>
+        <!-- 토스트팝업 레이아웃End -->    
+
+        <!-- 모달팝업 레이아웃 -->
+        <div class="modal-pop">
+            <h4>스터디룸 예약을 진행하시겠습니까?</h4>
+            <div class="h5-box">
+                <h5>이용 예정일 <span style="font-size: inherit; font-weight: 400;">: 1월 8일</span></h5>
+                <h5>이용 안내 <span style="font-size: inherit; font-weight: 400;">: 스터디룸 A, 4인실, 1시간</span></h5>
+                <h5>결제 요금 <span style="font-size: inherit; font-weight: 400;">: 10,000원</span></h5>
+            </div>
+            <div class="btn-area">
+                <button type="button">취소</button>
+                <button type="button">확인</button>
+            </div>
+        </div>
+        <div class="modal-bg"></div>
+        <!-- 모달팝업 레이아웃End -->    
+        
+    </div>
+
+
+    <script>
+        const divs = document.querySelectorAll("#studyroom03_wrap .studyroom-area .studyroom-scroll>div");
+        const toastPop = document.querySelector("#studyroom03_wrap .toast-pop");
+        const modalPop = document.querySelector("#studyroom03_wrap .modal-pop");
+        const popClose = document.querySelector("#studyroom03_wrap .modal-pop .btn-area>button:first-child");
+        const button = document.querySelector("#studyroom03_wrap .studyroom-area>button")
+
+        divs.forEach((div, index) => {
+            div.addEventListener("click", () => {
+                div.classList.toggle("on");
+
+                if (div.classList.contains("ex")) {
+                    toastPop.style.display = 'flex';
+                    setTimeout(function() {
+                        toastPop.classList.add('show');
+                    }, 10);
+                    
+                    setTimeout(function() {
+                        toastPop.classList.remove('show');
+                        setTimeout(function() {
+                            toastPop.style.display = 'none';
+                            }, 500);
+                        }, 1500);
+                }else{
+                    // modalPop.classList.add("on");
+                    // document.querySelector("#studyroom03_wrap .modal-bg").classList.add("on")
+                }
+
+                if (div.classList.contains("on")) {
+                    button.classList.add("active");
+                } else {
+                    button.classList.remove("active");
+                }
+            });
+            button.addEventListener("click",()=>{
+                    if (button.classList.contains("active")) {
+                        modalPop.classList.add("on");
+                        document.querySelector("#studyroom03_wrap .modal-bg").classList.add("on")
+                    }
+                })
+            popClose.addEventListener("click", ()=>{
+                modalPop.classList.remove("on");
+                document.querySelector("#studyroom03_wrap .modal-bg").classList.remove("on")
+            })
+        }); 
+
+    </script>
+</body>
+</html>

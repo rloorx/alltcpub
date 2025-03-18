@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이용권 구입 - 01. 좌석유형</title>
+
+    <!-- css -->
+    <link rel="stylesheet" href="../common_css/common.css">
+</head>
+<body>
+    <div id="ticket_wrap" class="ticket_wrap">        
+        <div class="header">
+            <div class="in">
+                <h1><img src="../img/study_logo.png" alt="올티칭 스터디카페"></h1>
+                <ul class="gnb-area">
+                    <li onclick="openPopup()">고객센터</li>
+                    <li onclick="openPopup()">이벤트</li>
+                    <li onclick="openPopup()">요금안내</li>
+                </ul>
+                <p><span style="font-size: inherit;">홍길동</span> 회원님</p>
+                <div class="timer-wrap">
+                    <div class="timer">
+                        <div class="mask"></div>
+                    </div>
+                    <p><span>20</span>초</p>
+                </div>
+                <button type="button" class="logout-btn">로그아웃</button>
+            </div>
+        </div>
+        <div class="in">
+            <div class="back-arrow">
+                <img src="../img/user_join/back-arrow.png" alt="이전페이지로 돌아가기">
+            </div>
+            <div class="tit-area">
+                <h3>구입할 이용권의<span style="display: block; font-size:inherit;">좌석 유형을 선택해 주세요.</span></h3>
+            </div>
+            <div class="ticket-area">
+                <div class="top-effect"></div>
+                <div class="bottom-effect">
+                </div>
+                <div class="opt-box">
+                    <div>
+                        <h4>자유롭게 자리를 골라서 앉을래요.</h4>
+                    </div>                
+                    <div>
+                        <h4>한 자리를 고정적으로 쓰고 싶어요.</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="seat-area">
+                <div class="seat01">
+                    <h5>잔여 자유석</h5>
+                    <h5 class="seat-num">99/99석</h5>
+                </div>
+                <div class="seat02">
+                    <h5>퇴실 예정</h5>
+                    <h5 class="seat-num">00석</h5>
+                </div>
+                <div class="seat03">
+                    <h5>잔여 고정석</h5>
+                    <h5 class="seat-num">99/99석</h5>
+                </div>
+            </div>
+        </div>        
+    </div>
+
+
+    <script>      
+        document.addEventListener("DOMContentLoaded", function () {
+        const optArea2 = document.querySelector(".ticket_wrap .opt-box");
+        const arrowImg2 = document.querySelector(".ticket_wrap .bottom-effect");
+        const topBg2 = document.querySelector(".ticket_wrap .top-effect");
+
+        optArea2.addEventListener("scroll", function () {
+            const currentScroll2 = optArea2.scrollTop + optArea2.clientHeight;
+            const maxScroll2 = optArea2.scrollHeight;
+
+            if (currentScroll2 >= maxScroll2) {
+            arrowImg2.classList.add("hide");
+            topBg2.classList.add("show");
+            } else {
+            arrowImg2.classList.remove("hide");
+            topBg2.classList.remove("show");
+            }
+        });
+    });    
+
+    </script>
+</body>
+</html>

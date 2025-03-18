@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>스터디룸 - 02. 스터디룸 선택</title>
+
+    <!-- css -->
+    <link rel="stylesheet" href="../common_css/common.css">
+</head>
+<body>
+    <div id="studyroom02_wrap" class="ticket_wrap">        
+        <div class="header">
+            <div class="in">
+                <h1><img src="../img/study_logo.png" alt="올티칭 스터디카페"></h1>
+                <ul class="gnb-area">
+                    <li onclick="openPopup()">고객센터</li>
+                    <li onclick="openPopup()">이벤트</li>
+                    <li onclick="openPopup()">요금안내</li>
+                </ul>
+                <p><span style="font-size: inherit;">홍길동</span> 회원님</p>
+                <div class="timer-wrap">
+                    <div class="timer">
+                        <div class="mask"></div>
+                    </div>
+                    <p><span>20</span>초</p>
+                </div>
+                <button type="button" class="logout-btn">로그아웃</button>
+            </div>
+        </div>
+        <div class="in">
+            <div class="back-arrow">
+                <img src="../img/user_join/back-arrow.png" alt="이전페이지로 돌아가기">
+            </div>
+            <div class="tit-area">
+                <h3>1월 8일에 이용할 스터디룸을<span style="display: block; font-size:inherit;">선택해 주세요.</span></h3>
+            </div>
+            <div class="ticket-area">
+                <div class="top-effect"></div>
+                <div class="bottom-effect">
+                </div>
+                <div class="opt-box">
+                    <div class="opt-sb">
+                        <h4>스터디룸A</h4>
+                        <h4>4인실</h4>
+                    </div>                
+                    <div class="opt-sb">
+                        <h4>스터디룸B</h4>
+                        <h4>4인실</h4>
+                    </div>
+                    <div class="opt-sb">
+                        <h4>스터디룸C</h4>
+                        <h4>6인실</h4>
+                    </div>
+                    <div class="opt-sb">
+                        <h4>스터디룸D</h4>
+                        <h4>6인실</h4>
+                    </div>
+                    <div class="opt-sb">
+                        <h4>스터디룸E</h4>
+                        <h4>8인실</h4>
+                    </div>
+                    <div class="opt-sb">
+                        <h4>스터디룸F</h4>
+                        <h4>8인실</h4>
+                    </div>
+                </div>
+            </div>
+        </div>        
+    </div>
+
+
+    <script>      
+        document.addEventListener("DOMContentLoaded", function () {
+        const optArea2 = document.querySelector(".ticket_wrap .opt-box");
+        const arrowImg2 = document.querySelector(".ticket_wrap .bottom-effect");
+        const topBg2 = document.querySelector(".ticket_wrap .top-effect");
+
+        optArea2.addEventListener("scroll", function () {
+            const currentScroll2 = optArea2.scrollTop + optArea2.clientHeight;
+            const maxScroll2 = optArea2.scrollHeight;
+
+            if (currentScroll2 >= maxScroll2) {
+            arrowImg2.classList.add("hide");
+            topBg2.classList.add("show");
+            } else {
+            arrowImg2.classList.remove("hide");
+            topBg2.classList.remove("show");
+            }
+        });
+    });    
+
+    </script>
+</body>
+</html>
