@@ -52,6 +52,9 @@
                     </div>
                 </div>
                 <div class="studyroom-select">
+                    <div class="top-effect"></div>
+                    <div class="bottom-effect">
+                    </div>    
                     <div class="studyroom-scroll">
                         <div><h4>09:00</h4></div>
                         <div><h4>09:15</h4></div>
@@ -157,6 +160,25 @@
                 document.querySelector("#studyroom03_wrap .modal-bg").classList.remove("on")
             })
         }); 
+
+        document.addEventListener("DOMContentLoaded", function () {
+        const optArea2 = document.querySelector("#studyroom03_wrap .studyroom-scroll");
+        const arrowImg2 = document.querySelector("#studyroom03_wrap .bottom-effect");
+        const topBg2 = document.querySelector("#studyroom03_wrap .top-effect");
+
+        optArea2.addEventListener("scroll", function () {
+            const currentScroll2 = optArea2.scrollTop + optArea2.clientHeight;
+            const maxScroll2 = optArea2.scrollHeight;
+
+            if (currentScroll2 >= maxScroll2) {
+            arrowImg2.classList.add("hide");
+            topBg2.classList.add("show");
+            } else {
+            arrowImg2.classList.remove("hide");
+            topBg2.classList.remove("show");
+            }
+        });
+    });    
 
     </script>
 </body>

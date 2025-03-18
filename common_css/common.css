@@ -1935,6 +1935,65 @@ button {all: unset; text-align: center; border-radius: 5px; cursor: pointer; dis
     color: #fff;
 }
 
+#pay04 .gnb-popuparea .tit-area{
+    margin-bottom: 0px;
+}
+#pay04 .gnb-popuparea .cont-area{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#pay04 .gnb-popuparea .cont-area img{
+    height: 100px;
+    object-fit: contain;
+    margin-bottom: 20px;
+}
+#pay04 .gnb-popuparea .cont-area h3{
+    text-align: center;
+    margin-bottom: 30px;
+}
+#pay04 .gnb-popuparea .cont-area .pay-area{
+    width: 100%;
+    border-top: 1px solid #d9d9d9;
+    border-bottom: 1px solid #d9d9d9;
+    padding: 40px 0px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+#pay04 .gnb-popuparea .cont-area .pay-area>div{
+    display: flex;
+    min-width: 350px;
+    max-width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+#pay04 .gnb-popuparea .cont-area .pay-area>div>h4:first-child{
+    width: 140px;
+    border-right: 1px solid #d9d9d9;
+}
+#pay04 .gnb-popuparea .cont-area .pay-area>div>h4:last-child{
+    font-weight: 400;
+}
+#pay04 .gnb-popuparea .cont-area>p{
+    text-align: center;
+    color: #777;
+    margin-bottom: 50px;
+}
+#pay04 .gnb-popuparea .cont-area>button{
+    width: 505px;
+    height: 70px;
+    background: var(--maincolor);
+    border-radius: 5px;
+    font-size: var(--fonth4);
+    color: #fff;
+    font-weight: 700;
+}
+
+
 /* 입실페이지 */
 #enter_wrap>.in{
     position: relative;
@@ -2627,10 +2686,37 @@ button {all: unset; text-align: center; border-radius: 5px; cursor: pointer; dis
 #studyroom03_wrap .studyroom-area .studyroom-select{
     width: 100%;
     height: 520px;
-    padding: 0px 50px;
+    padding: 10px 50px;
     border: 1px solid var(--border);
     border-radius: 5px;
     margin-bottom: 10px;
+    position: relative;
+}
+#studyroom03_wrap .studyroom-area .studyroom-select .top-effect{
+    position: absolute;
+    top: 0;left: 0;
+    width: calc(100% - 15px); height: 50px;
+    background: linear-gradient(to top, rgba(255, 255, 255, 0) 0%, #fff 100%);
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    display: none;
+}
+#studyroom03_wrap .studyroom-area .studyroom-select .top-effect.show{
+    display: flex;
+}
+#studyroom03_wrap .studyroom-area .studyroom-select .bottom-effect{
+    position: absolute;
+    bottom: 0;left: 0;
+    width: calc(100% - 15px); height: 50px;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #fff 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+}
+#studyroom03_wrap .studyroom-area .studyroom-select .bottom-effect.hide{
+    display: none;
 }
 #studyroom03_wrap .studyroom-area .studyroom-scroll{
     width: 100%;
