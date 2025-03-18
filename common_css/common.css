@@ -2179,11 +2179,21 @@ button {all: unset; text-align: center; border-radius: 5px; cursor: pointer; dis
 #seats_wrap .seats-area .color-info>div p{
     color: var(--lightertxt);
 }
-#seats_wrap .seats-area .seat-select{
+#seats_wrap .seats-area .seat-box{
     width: 100%;
     height: 620px;
     border-radius: 5px;
     border: 1px solid var(--border);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;    
+}
+#seats_wrap .seats-area .seat-select{
+    width: 800px;
+    height: 600px;
+    /* border-radius: 5px; */
+    /* border: 1px solid var(--border); */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -2458,6 +2468,98 @@ button {all: unset; text-align: center; border-radius: 5px; cursor: pointer; dis
 #studyroom02_wrap.ticket_wrap .tit-area{
     margin-bottom: 110px;
 }
+
+/* 스터디룸 - 01 날짜선택 */
+#studyroom_wrap>.in{
+    position: relative;
+}
+#studyroom_wrap .toast-pop{
+    top: 260px;
+}
+#studyroom_wrap .back-arrow{
+    position: absolute;
+    left: -20px; top: 0;
+    transform: translateX(-100%);
+}
+#studyroom_wrap .back-arrow img{
+    height: 40px;
+    object-fit: contain;
+}
+#studyroom_wrap .tit-area{
+    margin-bottom: 80px;
+}
+
+#studyroom_wrap .cal-area{
+    width: 100%;
+    height: 640px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    border: 1px solid var(--border);
+}
+#studyroom_wrap .cal-area .cal-select{
+    width: 900px;
+}
+#studyroom_wrap .calendar-container {
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+#studyroom_wrap .calendar-container .nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+#studyroom_wrap .calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 20px;
+    margin-top: 10px;
+}
+
+#studyroom_wrap .day, #studyroom_wrap .empty {
+    width: 100px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--maincolor);
+    border-radius: 5px;
+    font-size: var(--fonth4);
+    font-weight: 700;
+    color: var(--maincolor);
+    cursor: pointer;
+}
+
+#studyroom_wrap .selected {
+    background-color: var(--maincolor);
+    border: none;
+    color: white;
+}
+#studyroom_wrap .weekend {
+    color: blue;
+}
+#studyroom_wrap .weekend:first-child {
+    color: red;
+}
+#studyroom_wrap .prev-month, #studyroom_wrap .next-month{
+    opacity: 0.4;
+}
+/* #studyroom_wrap .past, #studyroom_wrap .prev-month {
+    background-color: lightgray;
+    color: darkgray;
+}
+#studyroom_wrap .today {
+    background-color: lightblue;
+}
+
+#studyroom_wrap .next-month {
+    color: gray;
+    opacity: 0.5;
+} */
+
 
 /* 스터디룸 시간 선택 */ 
 #studyroom03_wrap>.in{
