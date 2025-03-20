@@ -1442,6 +1442,9 @@ button {all: unset; text-align: center; border-radius: 5px; cursor: pointer; dis
     word-break: keep-all;
 }
 /* gnb 이벤트End */
+#info01{
+    overflow-x: hidden;
+}
 #info01 .gnb-popuparea .tit-area{
     margin-bottom: 70px;
 }
@@ -1449,8 +1452,12 @@ button {all: unset; text-align: center; border-radius: 5px; cursor: pointer; dis
     height: 420px;
     display: flex;
     justify-content: space-between;
+    position: relative;
 }
 #info01 .cont-area .tab-area{
+    position: sticky;
+    top: 0;
+    background: #fff;
     margin-right: 40px;
 }
 #info01 .cont-area .tab-area ul{
@@ -1486,6 +1493,8 @@ button {all: unset; text-align: center; border-radius: 5px; cursor: pointer; dis
 }
 #info01 .table-area{
     width: 670px;
+    min-height: 425px;
+    overflow-y: auto;
 }
 #info01 .table-area table{
     table-layout: auto;
