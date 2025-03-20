@@ -1444,6 +1444,7 @@ button {all: unset; text-align: center; border-radius: 5px; cursor: pointer; dis
 /* gnb 이벤트End */
 #info01{
     overflow-x: hidden;
+    overflow-y: hidden;
 }
 #info01 .gnb-popuparea .tit-area{
     margin-bottom: 70px;
@@ -2184,6 +2185,10 @@ button {all: unset; text-align: center; border-radius: 5px; cursor: pointer; dis
 /* 입실페이지End */
 
 /* 좌석배치도페이지 */
+#seats_wrap{
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
 #seats_wrap>.in{
     position: relative;
 }
@@ -2271,6 +2276,22 @@ button {all: unset; text-align: center; border-radius: 5px; cursor: pointer; dis
     height: 535px;
     object-fit: contain;
 }
+
+/* 좌석배치도 css 수정 250320 */
+#seats_wrap .seat-select-wrap{
+    position: relative;
+}
+#seats_wrap .seat-select-tab{
+    position: sticky;
+    top: 0;
+    background: #fff;
+}
+#seats_wrap .seat-box{
+    overflow-y: auto;
+    min-height: 600px;
+}
+/* 250320End */
+
 #seats_wrap .modal-pop{
     position: absolute;
     top: 50%; left: 50%;
