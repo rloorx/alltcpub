@@ -2252,8 +2252,32 @@ button {all: unset; text-align: center; border-radius: 5px; cursor: pointer; dis
 #seats_wrap .seats-area .color-info>div p{
     color: var(--lightertxt);
 }
-#seats_wrap .seats-area .seat-box{
-    width: 100%;
+#seats_wrap .seats-area .seat-select-wrap{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    position: relative;
+}
+#seats_wrap .seats-area .seat-select-wrap .seat-select-tab{
+    position: sticky;
+    top: 0;
+    background: #fff;
+}
+#seats_wrap .seats-area .seat-select-wrap .seat-select-tab .select-tab{
+    width: 130px;
+    height: 60px;
+    border-radius: 5px;
+    border: 1px solid var(--maincolor);
+    color: var(--maincolor);
+    font-weight: 700;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+#seats_wrap .seats-area .seat-select-wrap .seat-box{
+    width: 875px;
     height: 620px;
     border-radius: 5px;
     border: 1px solid var(--border);
@@ -2261,36 +2285,28 @@ button {all: unset; text-align: center; border-radius: 5px; cursor: pointer; dis
     flex-direction: column;
     align-items: center;
     justify-content: center;    
+    overflow-y: auto;
 }
 #seats_wrap .seats-area .seat-select{
     width: 800px;
-    height: 600px;
+    height: 1300px;
     /* border-radius: 5px; */
     /* border: 1px solid var(--border); */
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    background-attachment: local;
+}
+#seats_wrap .seats-area .seat-select>div{
+    height: 1300px;
+    width: 100%;
 }
 #seats_wrap .seats-area .seat-select img{
     height: 535px;
     object-fit: contain;
 }
 
-/* 좌석배치도 css 수정 250320 */
-#seats_wrap .seat-select-wrap{
-    position: relative;
-}
-#seats_wrap .seat-select-tab{
-    position: sticky;
-    top: 0;
-    background: #fff;
-}
-#seats_wrap .seat-box{
-    overflow-y: auto;
-    min-height: 600px;
-}
-/* 250320End */
 
 #seats_wrap .modal-pop{
     position: absolute;
