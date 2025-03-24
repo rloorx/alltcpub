@@ -1402,7 +1402,7 @@ button {all: unset; text-align: center; border-radius: 5px; cursor: pointer; dis
     display: none;
 }
 #event01-1 .opt-area .top-effect.show{
-    display: flex;
+    display: none;
 }
 #event01-1 .opt-area .bottom-effect{
     position: absolute;
@@ -1453,9 +1453,9 @@ button {all: unset; text-align: center; border-radius: 5px; cursor: pointer; dis
     object-fit: cover;
 }
 #event01-1 .opt-area .opt-box p{
-    margin-bottom: 100px;
     font-size: var(--fonth5);
     word-break: keep-all;
+    margin-bottom: 15px;
 }
 /* gnb 이벤트End */
 #info01{
