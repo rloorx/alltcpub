@@ -2912,3 +2912,30 @@ button {all: unset; text-align: center; border-radius: 5px; cursor: pointer; dis
     display: flex;
 }
 
+#link .gnb-popuparea .tit-area{
+    margin-bottom: 90px;
+}
+#link .gnb-popuparea .cont-area{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#link .gnb-popuparea .cont-area>img{
+    height: 150px;
+    object-fit: contain;
+    margin-bottom: 50px;
+}
+#link .gnb-popuparea .cont-area>h4{
+    text-align: center;
+    margin-bottom: 60px;
+}
+#link .gnb-popuparea .cont-area>button{
+    width: 505px;
+    height: 70px;
+    background: var(--maincolor);
+    border-radius: 5px;
+    font-size: var(--fonth4);
+    color: #fff;
+    font-weight: 700;
+}
+
