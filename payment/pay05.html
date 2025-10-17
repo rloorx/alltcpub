@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>결제하기-할부결제</title>
+    <!-- css -->
+    <link rel="stylesheet" href="../common_css/common.css">
+</head>
+<body>
+    <div id="pay05">
+        <div class="gnb-popuparea">
+            <div class="tit-area">
+                <div class="back-area" style="visibility: hidden;" onclick="goBack()">
+                    <img src="../img/main/popup-back.png" alt="이전페이지로">
+                </div>
+                <h2>할부 개월 선택</h2>
+            </div>
+            <div class="cont-area">
+                <div class="pay-area">
+                    <!-- <div class="pay-item">
+                        <h4>상품명</h4>
+                        <h4>[사물함명] 1개월</h4>
+                    </div> -->
+                    <div class="pay-charge">
+                        <h4>결제 금액</h4>
+                        <h4>100,000원</h4>
+                    </div>
+                </div>
+                <div class="plan-area">
+                    <h4>할부 개월 수</h4>
+                    <select id="payment-plan">
+                        <option value="2">2개월</option>
+                        <option value="3">3개월</option>
+                        <option value="4">4개월</option>
+                        <option value="5">5개월</option>
+                        <option value="6">6개월</option>
+                    </select>
+                </div>
+                <button type="button" onclick="location.href='./pay02.html'">결제 진행하기</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function goBack(){
+            window.history.back();
+        }
+
+    </script>
+</body>
+</html>
